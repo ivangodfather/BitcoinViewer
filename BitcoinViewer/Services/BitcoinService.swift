@@ -17,9 +17,12 @@ protocol BitcoinServiceType {
 final class BitcoinService: BitcoinServiceType {
     
     private let coinDeskApiProvider: MoyaProvider<CoinDeskAPI>
+    private let databaseProvider: DatabaseProviderType
     
-    init(coinDeskApiProvider: MoyaProvider<CoinDeskAPI> = MoyaProvider<CoinDeskAPI>()) {
+    init(coinDeskApiProvider: MoyaProvider<CoinDeskAPI> = MoyaProvider<CoinDeskAPI>(),
+         databaseProvider: DatabaseProviderType = DatabaseProvider()) {
         self.coinDeskApiProvider = coinDeskApiProvider
+        self.databaseProvider = databaseProvider
     }
     
     func fetch(weeks: Int) -> Observable<[BitcoinPrice]> {
@@ -35,6 +38,10 @@ final class BitcoinService: BitcoinServiceType {
             .map({  bitcoinPrices in
                 return bitcoinPrices.sorted {$0.date > $1.date }
             })
+            .do(onNext: { [databaseProvider] bitcoinPrices in
+                databaseProvider.saveBitcoinPrices(prices: bitcoinPrices)
+            })
+            .startWith(databaseProvider.bitCoinPrices())
     }
     
 }

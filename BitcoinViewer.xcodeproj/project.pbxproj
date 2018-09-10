@@ -13,7 +13,7 @@
 		42442F632146AE20000B604C /* CoinDeskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* CoinDeskResponse.swift */; };
 		42442F652146AED6000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
 		42442F682146AF75000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
-		42442F6B2146B618000B604C /* Utils+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Utils+Date.swift */; };
+		42442F6B2146B618000B604C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
 		42442F6E2146B984000B604C /* ListBitcoinPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6D2146B984000B604C /* ListBitcoinPricesViewController.swift */; };
 		42442F752146BA76000B604C /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
 		42442F792146BB1B000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
@@ -25,7 +25,11 @@
 		42442F8121471441000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
 		42442F822147144D000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
 		42442F832147147E000B604C /* CoinDeskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* CoinDeskResponse.swift */; };
-		42442F842147148D000B604C /* Utils+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Utils+Date.swift */; };
+		42442F842147148D000B604C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
+		42442F8621471BC2000B604C /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
+		42442F8921471E83000B604C /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
+		42442F8B21471F6C000B604C /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
+		42442F8C21471F76000B604C /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
 		5339E636ED2CBCFC29DE70CC /* Pods_BitcoinViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFE5ACBE877CA727274C0B8 /* Pods_BitcoinViewer.framework */; };
 		5CB6750A0C797E35AFFBC27C /* Pods_BitcoinViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF6E1B9AB5370740B8CCCDD /* Pods_BitcoinViewerTests.framework */; };
 		EF55C6B021468A8700E44F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6AF21468A8600E44F8F /* AppDelegate.swift */; };
@@ -112,12 +116,14 @@
 		42442F622146AE20000B604C /* CoinDeskResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskResponse.swift; sourceTree = "<group>"; };
 		42442F642146AED6000B604C /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		42442F672146AF75000B604C /* CoinDeskApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskApiProvider.swift; sourceTree = "<group>"; };
-		42442F6A2146B618000B604C /* Utils+Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Utils+Date.swift"; sourceTree = "<group>"; };
+		42442F6A2146B618000B604C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 		42442F6D2146B984000B604C /* ListBitcoinPricesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinPricesViewController.swift; sourceTree = "<group>"; };
 		42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinPricesViewModel.swift; sourceTree = "<group>"; };
 		42442F782146BB1B000B604C /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		42442F7A2146C10A000B604C /* BitcoinPriceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceTableViewCell.swift; sourceTree = "<group>"; };
 		42442F7C2146C207000B604C /* BitcoinPriceTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BitcoinPriceTableViewCell.xib; sourceTree = "<group>"; };
+		42442F8521471BC2000B604C /* DatabaseProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProvider.swift; sourceTree = "<group>"; };
+		42442F8A21471F6C000B604C /* Encondable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Encondable+Extension.swift"; sourceTree = "<group>"; };
 		5907085891B77B99E4A2773D /* Pods-BitcoinViewer WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		73D30B87374DDBC0905A4D1D /* Pods-BitcoinViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer/Pods-BitcoinViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		7CE222600B4FD730E6B7BF94 /* Pods_BitcoinViewer_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				42442F672146AF75000B604C /* CoinDeskApiProvider.swift */,
+				42442F8521471BC2000B604C /* DatabaseProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -247,7 +254,8 @@
 		42442F692146B602000B604C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				42442F6A2146B618000B604C /* Utils+Date.swift */,
+				42442F6A2146B618000B604C /* Date+Extension.swift */,
+				42442F8A21471F6C000B604C /* Encondable+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -738,8 +746,10 @@
 				42442F7B2146C10A000B604C /* BitcoinPriceTableViewCell.swift in Sources */,
 				42442F752146BA76000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
 				EF775A3D21469ACB004A04D3 /* BitcoinService.swift in Sources */,
-				42442F6B2146B618000B604C /* Utils+Date.swift in Sources */,
+				42442F6B2146B618000B604C /* Date+Extension.swift in Sources */,
+				42442F8621471BC2000B604C /* DatabaseProvider.swift in Sources */,
 				42442F6E2146B984000B604C /* ListBitcoinPricesViewController.swift in Sources */,
+				42442F8B21471F6C000B604C /* Encondable+Extension.swift in Sources */,
 				42442F652146AED6000B604C /* BitcoinPrice.swift in Sources */,
 				EF55C6B021468A8700E44F8F /* AppDelegate.swift in Sources */,
 				42442F792146BB1B000B604C /* ViewModelType.swift in Sources */,
@@ -768,13 +778,15 @@
 			files = (
 				42442F8021471413000B604C /* CoinDeskApiProvider.swift in Sources */,
 				EF55C6ED21468A8D00E44F8F /* NotificationController.swift in Sources */,
-				42442F842147148D000B604C /* Utils+Date.swift in Sources */,
+				42442F842147148D000B604C /* Date+Extension.swift in Sources */,
 				EF55C6EB21468A8D00E44F8F /* ExtensionDelegate.swift in Sources */,
 				EF55C70621468B9E00E44F8F /* RowController.swift in Sources */,
 				42442F822147144D000B604C /* BitcoinPrice.swift in Sources */,
 				42442F8121471441000B604C /* ViewModelType.swift in Sources */,
 				42442F832147147E000B604C /* CoinDeskResponse.swift in Sources */,
 				EF55C6E921468A8D00E44F8F /* InterfaceController.swift in Sources */,
+				42442F8921471E83000B604C /* DatabaseProvider.swift in Sources */,
+				42442F8C21471F76000B604C /* Encondable+Extension.swift in Sources */,
 				42442F7F2147140B000B604C /* BitcoinService.swift in Sources */,
 				42442F7E2147126D000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
 			);

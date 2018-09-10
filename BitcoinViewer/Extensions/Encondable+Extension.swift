@@ -1,5 +1,5 @@
 //
-//  BitcoinPrice.swift
+//  Encondable+Extension.swift
 //  BitcoinViewer
 //
 //  Created by Ivan Ruiz Monjo on 10/09/2018.
@@ -8,7 +8,8 @@
 
 import Foundation
 
-struct BitcoinPrice: Codable {
-    let date: String
-    let price: Double
+extension Encodable {
+    var asData: Data? {
+        return try? JSONEncoder().encode(self)
+    }
 }

@@ -11,13 +11,15 @@ import NSObject_Rx
 import RxViewController
 
 final class ListBitcoinPricesViewController: UIViewController {
-
+    
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = ListBitcoinPricesViewModel()
     private  let bitcoinPriceCellName = String(describing: BitcoinPriceTableViewCell.self)
-
+    private lazy var realTimeHeaderView: RealTimeHeaderView? = { return UINib(nibName: String(describing: RealTimeHeaderView.self), bundle: nil).instantiate(withOwner: self, options: nil).first as? RealTimeHeaderView
+    }()
+    
     private var bitcoinPrices: [BitcoinPrice] = [] {
         didSet {
             tableView.reloadData()
@@ -33,9 +35,12 @@ final class ListBitcoinPricesViewController: UIViewController {
             switch state {
             case .loading:
                 self?.activityIndicatorView.startAnimating()
-            case .loaded(let bitcoinPrices):
+            case .loaded(let bitcoinPrices, let bitcoinRealTime):
                 self?.activityIndicatorView.stopAnimating()
                 self?.bitcoinPrices = bitcoinPrices
+                if let realTime = bitcoinRealTime {
+                    self?.realTimeHeaderView?.setup(bitcoinPrice: realTime)
+                }
             }
         }).disposed(by: rx.disposeBag)
     }
@@ -44,12 +49,17 @@ final class ListBitcoinPricesViewController: UIViewController {
         tableView.register(UINib(nibName: bitcoinPriceCellName, bundle: nil), forCellReuseIdentifier: bitcoinPriceCellName)
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.tableHeaderView = realTimeHeaderView
+        var frame = tableView.tableHeaderView?.frame
+        frame?.size.height = 40
+        tableView.tableHeaderView?.frame = frame!
+        tableView.tableHeaderView = tableView.tableHeaderView
     }
-
+    
 }
 
 extension ListBitcoinPricesViewController: UITableViewDataSource, UITableViewDelegate {
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: bitcoinPriceCellName) as? BitcoinPriceTableViewCell ?? BitcoinPriceTableViewCell()
         let bitcoinPrice = bitcoinPrices[indexPath.row]
@@ -60,5 +70,5 @@ extension ListBitcoinPricesViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return bitcoinPrices.count
     }
-
+    
 }

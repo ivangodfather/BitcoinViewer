@@ -12,6 +12,7 @@ import RxSwift
 
 protocol BitcoinServiceType {
     func fetch(weeks: Int) -> Observable<[BitcoinPrice]>
+    func realTime() -> Observable<BitcoinPrice>
 }
 
 final class BitcoinService: BitcoinServiceType {
@@ -42,6 +43,22 @@ final class BitcoinService: BitcoinServiceType {
                 databaseProvider.saveBitcoinPrices(prices: bitcoinPrices)
             })
             .startWith(databaseProvider.bitCoinPrices())
+    }
+    
+    func realTime() -> Observable<BitcoinPrice> {
+        let bitcoinPrice = coinDeskApiProvider
+            .rx
+            .request(.realTime)
+            .asObservable()
+            .filterSuccessfulStatusCodes()
+            .map(RealTimeResponse.self, atKeyPath: "bpi.EUR")
+            .map({ realTimeResponse -> BitcoinPrice in
+               return BitcoinPrice(date: Date().longFormat, price: realTimeResponse.rate)
+            })
+        return Observable<Int>.interval(1.0, scheduler: MainScheduler.instance).flatMap { _ in
+            return bitcoinPrice
+        }
+        
     }
     
 }

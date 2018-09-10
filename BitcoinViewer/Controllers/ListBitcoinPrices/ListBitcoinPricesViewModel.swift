@@ -22,7 +22,14 @@ final class ListBitcoinPricesViewModel: ViewModelType {
             .viewWillAppear
             .map { _ in return 2 }
             .flatMap(bitcoinService.fetch)
-            .map { State.loaded(bitcoinPrices: $0) }
+            .flatMap({ [bitcoinService] bitCoinPrices  in
+                return bitcoinService.realTime()
+                    .map { bitcoinPrice -> BitcoinPrice? in
+                        return bitcoinPrice
+                    }
+                    .startWith(nil).map { (bitCoinPrices, $0) }
+            })
+            .map { State.loaded(bitcoinPrices: $0.0, realTime: $0.1) }
             .startWith(State.loading)
         
         return Output(state: state)
@@ -30,7 +37,7 @@ final class ListBitcoinPricesViewModel: ViewModelType {
     
     enum State {
         case loading
-        case loaded(bitcoinPrices: [BitcoinPrice])
+        case loaded(bitcoinPrices: [BitcoinPrice], realTime : BitcoinPrice?)
     }
 }
 

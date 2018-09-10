@@ -15,6 +15,12 @@ extension Date {
         return dateFormatter.string(from: self)
     }
     
+    var longFormat: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        return dateFormatter.string(from: self)
+    }
+    
     func remove(weeks: Int) -> Date {
         return self.addingTimeInterval(-Double(weeks) * 7 * 24 * 60 * 60)
     }

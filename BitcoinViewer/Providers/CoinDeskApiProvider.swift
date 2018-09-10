@@ -11,6 +11,7 @@ import Moya
 
 enum CoinDeskAPI {
     case rates(startDate: String, endDate: String)
+    case realTime
 }
 
 extension CoinDeskAPI: TargetType {
@@ -22,6 +23,7 @@ extension CoinDeskAPI: TargetType {
     var path: String {
         switch self {
         case .rates: return "historical/close.json"
+        case .realTime: return "currentprice/EUR.json"
         }
     }
     
@@ -33,6 +35,7 @@ extension CoinDeskAPI: TargetType {
         switch self {
         case let .rates(startDate, endDate):
             return .requestParameters(parameters: ["start": startDate, "end": endDate], encoding: URLEncoding.default)
+        default: return .requestPlain
         }
     }
     

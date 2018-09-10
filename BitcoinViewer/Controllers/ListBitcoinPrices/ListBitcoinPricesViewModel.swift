@@ -8,8 +8,6 @@
 
 import Foundation
 import RxSwift
-import RxCocoa
-import RxViewController
 
 final class ListBitcoinPricesViewModel: ViewModelType {
     

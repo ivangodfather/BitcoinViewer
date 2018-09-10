@@ -19,6 +19,7 @@ PODS:
 DEPENDENCIES:
   - Moya/RxSwift
   - "NSObject+Rx"
+  - RxCocoa
   - RxSwift
   - RxViewController
 
@@ -41,6 +42,6 @@ SPEC CHECKSUMS:
   RxSwift: 99e10317ddfcc7fbe01356aafd118fde4a0be104
   RxViewController: 203510707e73dd95f147f0c387710e3ec80d2b0f
 
-PODFILE CHECKSUM: ce6897c916a72e6323985171230df476f3990685
+PODFILE CHECKSUM: 6d4263a1fc6ab393dd886e2023dde3fa18f20be3
 
 COCOAPODS: 1.5.3

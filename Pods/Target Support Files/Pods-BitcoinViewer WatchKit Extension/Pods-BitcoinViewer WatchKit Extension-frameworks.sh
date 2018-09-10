@@ -141,6 +141,23 @@ strip_invalid_archs() {
   STRIP_BINARY_RETVAL=1
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Moya-watchOS/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NSObject+Rx-watchOS/NSObject_Rx.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Result-watchOS/Result.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Moya-watchOS/Moya.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/NSObject+Rx-watchOS/NSObject_Rx.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/Result-watchOS/Result.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework"
+fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait
 fi

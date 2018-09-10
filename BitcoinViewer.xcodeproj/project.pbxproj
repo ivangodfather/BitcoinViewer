@@ -19,6 +19,13 @@
 		42442F792146BB1B000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
 		42442F7B2146C10A000B604C /* BitcoinPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F7A2146C10A000B604C /* BitcoinPriceTableViewCell.swift */; };
 		42442F7D2146C207000B604C /* BitcoinPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42442F7C2146C207000B604C /* BitcoinPriceTableViewCell.xib */; };
+		42442F7E2147126D000B604C /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
+		42442F7F2147140B000B604C /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
+		42442F8021471413000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
+		42442F8121471441000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
+		42442F822147144D000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
+		42442F832147147E000B604C /* CoinDeskResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* CoinDeskResponse.swift */; };
+		42442F842147148D000B604C /* Utils+Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Utils+Date.swift */; };
 		5339E636ED2CBCFC29DE70CC /* Pods_BitcoinViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFE5ACBE877CA727274C0B8 /* Pods_BitcoinViewer.framework */; };
 		5CB6750A0C797E35AFFBC27C /* Pods_BitcoinViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF6E1B9AB5370740B8CCCDD /* Pods_BitcoinViewerTests.framework */; };
 		EF55C6B021468A8700E44F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6AF21468A8600E44F8F /* AppDelegate.swift */; };
@@ -463,6 +470,7 @@
 				EF55C6DF21468A8C00E44F8F /* Sources */,
 				EF55C6E021468A8C00E44F8F /* Frameworks */,
 				EF55C6E121468A8C00E44F8F /* Resources */,
+				5C27018CD998E8513EB9D925 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -606,6 +614,34 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		5C27018CD998E8513EB9D925 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-watchOS/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx-watchOS/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-watchOS/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		97C8053923DB5107E0EE4F7D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -667,12 +703,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer/Pods-BitcoinViewer-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
-				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
-				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-iOS/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx-iOS/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -730,10 +766,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42442F8021471413000B604C /* CoinDeskApiProvider.swift in Sources */,
 				EF55C6ED21468A8D00E44F8F /* NotificationController.swift in Sources */,
+				42442F842147148D000B604C /* Utils+Date.swift in Sources */,
 				EF55C6EB21468A8D00E44F8F /* ExtensionDelegate.swift in Sources */,
 				EF55C70621468B9E00E44F8F /* RowController.swift in Sources */,
+				42442F822147144D000B604C /* BitcoinPrice.swift in Sources */,
+				42442F8121471441000B604C /* ViewModelType.swift in Sources */,
+				42442F832147147E000B604C /* CoinDeskResponse.swift in Sources */,
 				EF55C6E921468A8D00E44F8F /* InterfaceController.swift in Sources */,
+				42442F7F2147140B000B604C /* BitcoinService.swift in Sources */,
+				42442F7E2147126D000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,7 +8,7 @@
 
 import UIKit
 import NSObject_Rx
-
+import RxViewController
 
 final class ListBitcoinPricesViewController: UIViewController {
 

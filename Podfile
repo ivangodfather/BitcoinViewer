@@ -10,6 +10,7 @@ target 'BitcoinViewer' do
   pod 'RxSwift'
   pod 'Moya/RxSwift'
   pod 'RxViewController'
+  pod 'NSObject+Rx'
 
   target 'BitcoinViewerTests' do
     inherit! :search_paths

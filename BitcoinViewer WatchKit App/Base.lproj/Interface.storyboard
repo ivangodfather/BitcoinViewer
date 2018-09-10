@@ -19,7 +19,7 @@
                                 <tableRow identifier="RowController" id="llr-0G-AB6" customClass="RowController" customModule="BitcoinViewer_WatchKit_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="UMW-Sg-zqV">
                                         <items>
-                                            <label width="136" height="60" alignment="left" text="Label" textAlignment="center" id="xfX-OV-f6k"/>
+                                            <label width="136" height="60" alignment="left" text="Label" textAlignment="center" numberOfLines="2" id="xfX-OV-f6k"/>
                                         </items>
                                     </group>
                                     <connections>

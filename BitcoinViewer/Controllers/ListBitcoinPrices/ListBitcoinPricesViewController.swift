@@ -12,6 +12,7 @@ import RxViewController
 
 final class ListBitcoinPricesViewController: UIViewController {
 
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
     @IBOutlet private weak var tableView: UITableView!
     
     private let viewModel = ListBitcoinPricesViewModel()
@@ -28,8 +29,14 @@ final class ListBitcoinPricesViewController: UIViewController {
         setupView()
         let input = ListBitcoinPricesViewModel.Input(viewWillAppear: rx.viewWillAppear.asObservable().map { _ in return })
         let output = viewModel.transform(input: input)
-        output.bitcoinPrices.subscribe(onNext: { [weak self] bitcoinPrices in
-            self?.bitcoinPrices = bitcoinPrices
+        output.state.subscribe(onNext: { [weak self] state in
+            switch state {
+            case .loading:
+                self?.activityIndicatorView.startAnimating()
+            case .loaded(let bitcoinPrices):
+                self?.activityIndicatorView.stopAnimating()
+                self?.bitcoinPrices = bitcoinPrices
+            }
         }).disposed(by: rx.disposeBag)
     }
     

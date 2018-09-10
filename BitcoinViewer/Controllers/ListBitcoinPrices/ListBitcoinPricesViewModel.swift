@@ -18,13 +18,20 @@ final class ListBitcoinPricesViewModel: ViewModelType {
     }
     
     func transform(input: Input) -> Output {
-        let bitcoinPrices = input
+        let state = input
             .viewWillAppear
             .map { _ in return 2 }
             .flatMap(bitcoinService.fetch)
-        return Output(bitcoinPrices: bitcoinPrices)
+            .map { State.loaded(bitcoinPrices: $0) }
+            .startWith(State.loading)
+        
+        return Output(state: state)
     }
     
+    enum State {
+        case loading
+        case loaded(bitcoinPrices: [BitcoinPrice])
+    }
 }
 
 extension ListBitcoinPricesViewModel {
@@ -34,6 +41,6 @@ extension ListBitcoinPricesViewModel {
     }
     
     struct Output {
-        let bitcoinPrices: Observable<[BitcoinPrice]>
+        let state: Observable<State>
     }
 }

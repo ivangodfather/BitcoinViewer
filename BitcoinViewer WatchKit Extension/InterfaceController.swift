@@ -26,8 +26,13 @@ final class InterfaceController: WKInterfaceController {
         super.awake(withContext: context)
         let input = ListBitcoinPricesViewModel.Input(viewWillAppear: viewWillAppearPublishSubject.asObservable().map { _ in return })
         let output = viewModel.transform(input: input)
-        output.bitcoinPrices.subscribe(onNext: { [weak self] bitcoinPrices in
-            self?.bitcoinPrices = bitcoinPrices
+        output.state.subscribe(onNext: { [weak self] state in
+            switch state {
+            case .loading:
+                break
+            case .loaded(let bitcoinPrices):
+                self?.bitcoinPrices = bitcoinPrices
+            }
         }).disposed(by: disposeBag)
     }
     
@@ -35,7 +40,7 @@ final class InterfaceController: WKInterfaceController {
         tableView.setNumberOfRows(bitcoinPrices.count, withRowType: "RowController")
         for (index, bitcoinPrice) in bitcoinPrices.enumerated() {
             if let rowController = tableView.rowController(at: index) as? RowController {
-                rowController.rowLabel.setText(bitcoinPrice.price.description)
+                rowController.rowLabel.setText(bitcoinPrice.date + "\n" + bitcoinPrice.price.description)
             }
         }
     }

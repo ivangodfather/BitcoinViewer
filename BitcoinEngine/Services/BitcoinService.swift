@@ -22,7 +22,8 @@ final class BitcoinService: BitcoinServiceType {
     
     init(coinDeskApiProvider: MoyaProvider<CoinDeskAPI> = MoyaProvider<CoinDeskAPI>(),
          databaseProvider: DatabaseProviderType = DatabaseProvider()) {
-        self.coinDeskApiProvider = coinDeskApiProvider
+        let comesFromUITests = ProcessInfo().arguments.contains("UI_TESTS")
+        self.coinDeskApiProvider = comesFromUITests ? MoyaProvider<CoinDeskAPI>(stubClosure: MoyaProvider.delayedStub(3)) : coinDeskApiProvider
         self.databaseProvider = databaseProvider
     }
     

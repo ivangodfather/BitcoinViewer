@@ -57,7 +57,7 @@ final class ListBitcoinPricesViewController: UIViewController {
         tableView.delegate = self
         tableView.tableHeaderView = realTimeHeaderView
         var frame = tableView.tableHeaderView?.frame
-        frame?.size.height = 40
+        frame?.size.height = 90
         tableView.tableHeaderView?.frame = frame!
         tableView.tableHeaderView = tableView.tableHeaderView
     }

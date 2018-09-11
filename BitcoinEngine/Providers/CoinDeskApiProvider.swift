@@ -44,6 +44,20 @@ extension CoinDeskAPI: TargetType {
                  "Accept": "application/json"]
     }
     
-    var sampleData: Foundation.Data { return Foundation.Data() }
+    var sampleData: Foundation.Data {
+        switch self {
+        case .rates: return loadJson(file: "rates")
+        case .realTime: return loadJson(file: "realtime")
+        }
+    }
+    
+    private func loadJson(file: String) -> Data {
+        guard let url = Bundle.main.url(forResource: file,
+                                        withExtension: "json"),
+            let data = try? Data(contentsOf: url) else {
+                return Data()
+        }
+        return data
+    }
 
 }

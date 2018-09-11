@@ -25,6 +25,8 @@
 		4219C8452147C446000FE60A /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
 		4219C8462147C446000FE60A /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
 		4219C8472147C446000FE60A /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
+		421EC92421483EB4006E33BF /* rates.json in Resources */ = {isa = PBXBuildFile; fileRef = 421EC92221483EB4006E33BF /* rates.json */; };
+		421EC92521483EB4006E33BF /* realtime.json in Resources */ = {isa = PBXBuildFile; fileRef = 421EC92321483EB4006E33BF /* realtime.json */; };
 		4239C4B32147D32500DAA892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4239C4B22147D32500DAA892 /* Assets.xcassets */; };
 		4239C4BA2147D32600DAA892 /* BitcoinViewer Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4239C4B92147D32600DAA892 /* BitcoinViewer Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		4239C4C52147D32600DAA892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4239C4C42147D32600DAA892 /* Assets.xcassets */; };
@@ -220,6 +222,8 @@
 		4219C8222147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4219C8272147C34A000FE60A /* BitcoinEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4219C8302147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		421EC92221483EB4006E33BF /* rates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rates.json; sourceTree = "<group>"; };
+		421EC92321483EB4006E33BF /* realtime.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = realtime.json; sourceTree = "<group>"; };
 		4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitcoinViewer Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4239C4B22147D32500DAA892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4239C4B42147D32500DAA892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -437,6 +441,7 @@
 		4219C8202147C34A000FE60A /* BitcoinEngine */ = {
 			isa = PBXGroup;
 			children = (
+				421EC92121483EAD006E33BF /* JSON */,
 				4219C83E2147C41C000FE60A /* ViewModel */,
 				42442F692146B602000B604C /* Extensions */,
 				42442F662146AF5F000B604C /* Providers */,
@@ -468,6 +473,15 @@
 				42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		421EC92121483EAD006E33BF /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				421EC92221483EB4006E33BF /* rates.json */,
+				421EC92321483EB4006E33BF /* realtime.json */,
+			);
+			path = JSON;
 			sourceTree = "<group>";
 		};
 		4239C4AE2147D32400DAA892 /* BitcoinViewer Watch */ = {
@@ -1004,10 +1018,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				421EC92421483EB4006E33BF /* rates.json in Resources */,
 				42442F7D2146C207000B604C /* BitcoinPriceTableViewCell.xib in Resources */,
 				EF55C6BA21468A8B00E44F8F /* LaunchScreen.storyboard in Resources */,
 				EF55C6B721468A8B00E44F8F /* Assets.xcassets in Resources */,
 				42442F9521472ADA000B604C /* RealTimeHeaderView.xib in Resources */,
+				421EC92521483EB4006E33BF /* realtime.json in Resources */,
 				EF55C6B521468A8700E44F8F /* ListBitcoin.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

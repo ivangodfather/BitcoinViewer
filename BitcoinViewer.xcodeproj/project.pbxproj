@@ -52,6 +52,7 @@
 		4239C4FC2147FFCD00DAA892 /* ListBitcoinPricesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239C4FB2147FFCD00DAA892 /* ListBitcoinPricesViewModelTests.swift */; };
 		4239C4FF214800BA00DAA892 /* MockCurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239C4FE214800BA00DAA892 /* MockCurrencyService.swift */; };
 		4239C501214800DE00DAA892 /* MockBitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239C500214800DE00DAA892 /* MockBitcoinService.swift */; };
+		4239C504214814E700DAA892 /* DatabaseProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4239C503214814E700DAA892 /* DatabaseProviderTests.swift */; };
 		42442F6E2146B984000B604C /* ListBitcoinPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6D2146B984000B604C /* ListBitcoinPricesViewController.swift */; };
 		42442F7B2146C10A000B604C /* BitcoinPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F7A2146C10A000B604C /* BitcoinPriceTableViewCell.swift */; };
 		42442F7D2146C207000B604C /* BitcoinPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42442F7C2146C207000B604C /* BitcoinPriceTableViewCell.xib */; };
@@ -232,6 +233,7 @@
 		4239C4FB2147FFCD00DAA892 /* ListBitcoinPricesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListBitcoinPricesViewModelTests.swift; sourceTree = "<group>"; };
 		4239C4FE214800BA00DAA892 /* MockCurrencyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCurrencyService.swift; sourceTree = "<group>"; };
 		4239C500214800DE00DAA892 /* MockBitcoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBitcoinService.swift; sourceTree = "<group>"; };
+		4239C503214814E700DAA892 /* DatabaseProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseProviderTests.swift; sourceTree = "<group>"; };
 		42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalBitcoinResponse.swift; sourceTree = "<group>"; };
 		42442F642146AED6000B604C /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		42442F672146AF75000B604C /* CoinDeskApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskApiProvider.swift; sourceTree = "<group>"; };
@@ -453,6 +455,7 @@
 				4239C4FA2147FF7400DAA892 /* ViewModel */,
 				4219C8172147BD1B000FE60A /* Model */,
 				4219C8162147BAE9000FE60A /* Service */,
+				4239C502214814CF00DAA892 /* Provider */,
 				4219C8302147C34A000FE60A /* Info.plist */,
 			);
 			path = BitcoinEngineTests;
@@ -515,6 +518,14 @@
 				4239C500214800DE00DAA892 /* MockBitcoinService.swift */,
 			);
 			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4239C502214814CF00DAA892 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				4239C503214814E700DAA892 /* DatabaseProviderTests.swift */,
+			);
+			path = Provider;
 			sourceTree = "<group>";
 		};
 		42442F612146AE11000B604C /* Model */ = {
@@ -1288,6 +1299,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4239C4FF214800BA00DAA892 /* MockCurrencyService.swift in Sources */,
+				4239C504214814E700DAA892 /* DatabaseProviderTests.swift in Sources */,
 				4239C4FC2147FFCD00DAA892 /* ListBitcoinPricesViewModelTests.swift in Sources */,
 				4239C501214800DE00DAA892 /* MockBitcoinService.swift in Sources */,
 			);

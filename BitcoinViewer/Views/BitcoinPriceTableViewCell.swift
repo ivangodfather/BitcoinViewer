@@ -10,9 +10,11 @@ import UIKit
 
 final class BitcoinPriceTableViewCell: UITableViewCell {
     
-    func setup(bitcoinPrice: BitcoinPrice) {
-        self.textLabel?.text = bitcoinPrice.price.description
-        self.detailTextLabel?.text = bitcoinPrice.date
+    func setup(bitcoinPrice: BitcoinPrice, variation: Double?) {
+        textLabel?.text = bitcoinPrice.price.description
+        detailTextLabel?.text = bitcoinPrice.date
+        imageView?.image = (variation ?? 0.0) > 0.0 ? #imageLiteral(resourceName: "up") : #imageLiteral(resourceName: "down")
+        imageView?.contentMode = .scaleAspectFit
     }
     
 }

@@ -12,9 +12,12 @@ import RxSwift
 final class ListBitcoinPricesViewModel: ViewModelType {
     
     private let bitcoinService: BitcoinServiceType
+    private let currencyService: CurrencyServiceType
     
-    init(bitcoinService: BitcoinServiceType = BitcoinService()) {
+    init(bitcoinService: BitcoinServiceType = BitcoinService(),
+         currencyService: CurrencyServiceType = CurrencyService()) {
         self.bitcoinService = bitcoinService
+        self.currencyService = currencyService
     }
     
     func transform(input: Input) -> Output {
@@ -29,7 +32,10 @@ final class ListBitcoinPricesViewModel: ViewModelType {
                     }
                     .startWith(nil).map { (bitCoinPrices, $0) }
             })
-            .map { State.loaded(bitcoinPrices: $0.0, realTime: $0.1) }
+            .map { [currencyService] tuple in
+                let variations = currencyService.calculateVariation(list: tuple.0.map { $0.price })
+                return State.loaded(bitcoinPrices: tuple.0, realTime: tuple.1, variations: variations)
+            }
             .startWith(State.loading)
         
         return Output(state: state)
@@ -37,7 +43,7 @@ final class ListBitcoinPricesViewModel: ViewModelType {
     
     enum State {
         case loading
-        case loaded(bitcoinPrices: [BitcoinPrice], realTime : BitcoinPrice?)
+        case loaded(bitcoinPrices: [BitcoinPrice], realTime : BitcoinPrice?, variations: [Double])
     }
 }
 

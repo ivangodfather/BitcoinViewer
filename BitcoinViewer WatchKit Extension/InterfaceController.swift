@@ -30,7 +30,7 @@ final class InterfaceController: WKInterfaceController {
             switch state {
             case .loading:
                 break
-            case .loaded(let bitcoinPrices, _):
+            case .loaded(let bitcoinPrices, _, _):
                 self?.bitcoinPrices = bitcoinPrices
             }
         }).disposed(by: disposeBag)

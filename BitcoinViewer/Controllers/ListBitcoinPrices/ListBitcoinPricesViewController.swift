@@ -25,6 +25,7 @@ final class ListBitcoinPricesViewController: UIViewController {
             tableView.reloadData()
         }
     }
+    private var variations: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,10 @@ final class ListBitcoinPricesViewController: UIViewController {
             switch state {
             case .loading:
                 self?.activityIndicatorView.startAnimating()
-            case .loaded(let bitcoinPrices, let bitcoinRealTime):
+            case .loaded(let bitcoinPrices, let bitcoinRealTime, let variations):
                 self?.activityIndicatorView.stopAnimating()
                 self?.bitcoinPrices = bitcoinPrices
+                self?.variations = variations
                 if let realTime = bitcoinRealTime {
                     self?.realTimeHeaderView?.setup(bitcoinPrice: realTime)
                 }
@@ -63,7 +65,8 @@ extension ListBitcoinPricesViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: bitcoinPriceCellName) as? BitcoinPriceTableViewCell ?? BitcoinPriceTableViewCell()
         let bitcoinPrice = bitcoinPrices[indexPath.row]
-        cell.setup(bitcoinPrice: bitcoinPrice)
+        let variation = indexPath.row < variations.count ? variations[indexPath.row] : nil
+        cell.setup(bitcoinPrice: bitcoinPrice, variation: variation)
         return cell
     }
     

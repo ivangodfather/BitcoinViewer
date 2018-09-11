@@ -10,7 +10,11 @@ import Foundation
 @testable import BitcoinEngine
 
 final class MockCurrencyService: CurrencyServiceType {
+    
+    var receivedList: [Double]?
+    
     func calculateVariation(list: [Double]) -> [Double] {
+        receivedList = list
         return []
     }
 }

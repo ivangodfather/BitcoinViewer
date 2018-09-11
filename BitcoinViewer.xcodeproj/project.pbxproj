@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		06F1EDC9356FB70A546BCC5C /* Pods_Bitcoin_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680DBED9E7483BA75DB854C /* Pods_Bitcoin_Widget.framework */; };
 		18C65179E666CA0344B6A837 /* Pods_BitcoinViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */; };
+		371027A8FBBA3090B1E2E0BB /* Pods_BitcoinEngineTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C5561AFFDAADAE8969D0137 /* Pods_BitcoinEngineTests.framework */; };
 		4219C8192147BD30000FE60A /* BitcoinPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */; };
 		4219C8282147C34A000FE60A /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
 		4219C8312147C34A000FE60A /* BitcoinEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4219C8212147C34A000FE60A /* BitcoinEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -210,6 +211,8 @@
 		2F1F67BBA287414146FF5D95 /* Pods-BitcoinEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngine/Pods-BitcoinEngine.release.xcconfig"; sourceTree = "<group>"; };
 		30DF962E55D584C5822561FB /* Pods-BitcoinEngineWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngineWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngineWatch/Pods-BitcoinEngineWatch.release.xcconfig"; sourceTree = "<group>"; };
 		316F850D0D0715F6E2ECA420 /* Pods-BitcoinEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngine/Pods-BitcoinEngine.debug.xcconfig"; sourceTree = "<group>"; };
+		346C3D019B1E9D124EE94250 /* Pods-BitcoinEngineTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngineTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngineTests/Pods-BitcoinEngineTests.release.xcconfig"; sourceTree = "<group>"; };
+		3C5561AFFDAADAE8969D0137 /* Pods_BitcoinEngineTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinEngineTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceTests.swift; sourceTree = "<group>"; };
 		4219C81F2147C34A000FE60A /* BitcoinEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4219C8212147C34A000FE60A /* BitcoinEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcoinEngine.h; sourceTree = "<group>"; };
@@ -262,6 +265,7 @@
 		B022DE4124AB03BB1636C4EB /* Pods_BitcoinViewer_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BC42237F1F591D788A596E71 /* Pods-BitcoinViewer WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit App/Pods-BitcoinViewer WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		CC7DF3160AD2BB34AE532EF7 /* Pods-BitcoinViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerUITests/Pods-BitcoinViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		D979342A568AC1CC22CA1CFE /* Pods-BitcoinEngineTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngineTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngineTests/Pods-BitcoinEngineTests.debug.xcconfig"; sourceTree = "<group>"; };
 		E4361B6640D6504B7F5775C1 /* Pods-BitcoinViewer WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
 		E680DBED9E7483BA75DB854C /* Pods_Bitcoin_Widget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitcoin_Widget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55C6AC21468A8600E44F8F /* BitcoinViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BitcoinViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -307,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4219C8282147C34A000FE60A /* BitcoinEngine.framework in Frameworks */,
+				371027A8FBBA3090B1E2E0BB /* Pods_BitcoinEngineTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +384,7 @@
 				7D65286AD065431CF3231A6B /* Pods_BitcoinViewer_Watch.framework */,
 				151746E38A9AA20167772259 /* Pods_BitcoinViewer_Watch_Extension.framework */,
 				FF64AE7E8E1EE16B094B5945 /* Pods_BitcoinEngineWatch.framework */,
+				3C5561AFFDAADAE8969D0137 /* Pods_BitcoinEngineTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -404,6 +410,8 @@
 				9D30F6E1A87AFB9EE2C16E17 /* Pods-BitcoinViewer Watch Extension.release.xcconfig */,
 				A8EBE190369B1EBE00044457 /* Pods-BitcoinEngineWatch.debug.xcconfig */,
 				30DF962E55D584C5822561FB /* Pods-BitcoinEngineWatch.release.xcconfig */,
+				D979342A568AC1CC22CA1CFE /* Pods-BitcoinEngineTests.debug.xcconfig */,
+				346C3D019B1E9D124EE94250 /* Pods-BitcoinEngineTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -709,9 +717,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4219C83A2147C34A000FE60A /* Build configuration list for PBXNativeTarget "BitcoinEngineTests" */;
 			buildPhases = (
+				CE34216CD150E0633A2249B7 /* [CP] Check Pods Manifest.lock */,
 				4219C8232147C34A000FE60A /* Sources */,
 				4219C8242147C34A000FE60A /* Frameworks */,
 				4219C8252147C34A000FE60A /* Resources */,
+				CCB17DF0F1E698DCCAF6AF3D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -880,7 +890,6 @@
 					4219C8262147C34A000FE60A = {
 						CreatedOnToolsVersion = 9.4.1;
 						LastSwiftMigration = 0940;
-						TestTargetID = EF55C6AB21468A8600E44F8F;
 					};
 					4239C4AC2147D32400DAA892 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -1153,6 +1162,52 @@
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 				"$(DERIVED_FILE_DIR)/Pods-BitcoinViewer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CCB17DF0F1E698DCCAF6AF3D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinEngineTests/Pods-BitcoinEngineTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya-iOS/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result-iOS/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinEngineTests/Pods-BitcoinEngineTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE34216CD150E0633A2249B7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitcoinEngineTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1449,8 +1504,8 @@
 		};
 		4219C83B2147C34A000FE60A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D979342A568AC1CC22CA1CFE /* Pods-BitcoinEngineTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitcoinEngineTests/Info.plist;
@@ -1464,14 +1519,13 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitcoinViewer.app/BitcoinViewer";
 			};
 			name = Debug;
 		};
 		4219C83C2147C34A000FE60A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 346C3D019B1E9D124EE94250 /* Pods-BitcoinEngineTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = BitcoinEngineTests/Info.plist;
@@ -1484,7 +1538,6 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitcoinViewer.app/BitcoinViewer";
 			};
 			name = Release;
 		};

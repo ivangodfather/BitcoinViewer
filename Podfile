@@ -62,8 +62,20 @@ target 'BitcoinEngine' do
     # Pods for BitcoinViewer WatchKit Extension
     pod 'RxSwift'
     pod 'Moya/RxSwift'
-    pod 'RxViewController'
-    pod 'NSObject+Rx'
+    
+end
+
+target 'BitcoinEngineTests' do
+    platform :ios, '11.0'
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    
+    # Pods for BitcoinViewer WatchKit Extension
+    pod 'RxSwift'
+    pod 'Moya/RxSwift'
+    pod 'RxBlocking'
+    pod 'Nimble'
     
 end
 

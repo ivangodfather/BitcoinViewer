@@ -11,7 +11,15 @@ import Foundation
 import RxSwift
 
 final class MockBitcoinService: BitcoinServiceType {
+    
+    var weeksToFetch: Int = 0
+    var valuesToReturn: [BitcoinPrice]?
+    
     func fetch(weeks: Int) -> Observable<[BitcoinPrice]> {
+        weeksToFetch = weeks
+        if let valuesToReturn = valuesToReturn {
+            return .just(valuesToReturn)
+        }
         return .empty()
     }
     

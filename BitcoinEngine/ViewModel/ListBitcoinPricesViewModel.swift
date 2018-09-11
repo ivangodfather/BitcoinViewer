@@ -17,7 +17,7 @@ public final class ListBitcoinPricesViewModel: ViewModelType {
     init(bitcoinService: BitcoinServiceType = BitcoinService(),
          currencyService: CurrencyServiceType = CurrencyService()) {
         self.bitcoinService = bitcoinService
-        self.currencyService = CurrencyService()
+        self.currencyService = currencyService
     }
     
     public init() {
@@ -45,9 +45,21 @@ public final class ListBitcoinPricesViewModel: ViewModelType {
         return Output(state: state)
     }
     
-    public enum State {
+    public enum State: Equatable {
+        
         case loading
         case loaded(bitcoinPrices: [BitcoinPrice], realTime : Observable<BitcoinPrice?>, variations: [Double])
+        
+        public static func == (lhs: ListBitcoinPricesViewModel.State, rhs: ListBitcoinPricesViewModel.State) -> Bool {
+            switch (lhs, rhs) {
+            case (.loading, .loading):
+                return true
+            case (.loaded(let lbitcoinprices, _, let lvariations), .loaded(let rbitcoinprices, _, let rvariations)):
+                return lbitcoinprices == rbitcoinprices && lvariations == rvariations
+            default:
+                return false
+            }
+        }
     }
 }
 

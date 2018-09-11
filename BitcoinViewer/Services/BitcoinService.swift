@@ -34,7 +34,7 @@ final class BitcoinService: BitcoinServiceType {
             .request(CoinDeskAPI.rates(startDate: startDate, endDate: endDate))
             .asObservable()
             .filterSuccessfulStatusCodes()
-            .map(CoinDeskResponse.self)
+            .map(HistoricalBitcoinResponse.self)
             .map  { $0.bpi.map(BitcoinPrice.init) }
             .map({  bitcoinPrices in
                 return bitcoinPrices.sorted {$0.date > $1.date }
@@ -58,7 +58,6 @@ final class BitcoinService: BitcoinServiceType {
         return Observable<Int>.interval(1.0, scheduler: MainScheduler.instance).flatMap { _ in
             return bitcoinPrice
         }
-        
     }
     
 }

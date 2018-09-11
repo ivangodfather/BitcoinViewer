@@ -9,7 +9,9 @@
 import Foundation
 
 extension Encodable {
+    
     var asData: Data? {
         return try? JSONEncoder().encode(self)
     }
+    
 }

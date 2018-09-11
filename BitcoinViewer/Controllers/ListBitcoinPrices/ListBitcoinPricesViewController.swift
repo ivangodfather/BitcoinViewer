@@ -19,18 +19,16 @@ final class ListBitcoinPricesViewController: UIViewController {
     private  let bitcoinPriceCellName = String(describing: BitcoinPriceTableViewCell.self)
     private lazy var realTimeHeaderView: RealTimeHeaderView? = { return UINib(nibName: String(describing: RealTimeHeaderView.self), bundle: nil).instantiate(withOwner: self, options: nil).first as? RealTimeHeaderView
     }()
-    
     private var bitcoinPrices: [BitcoinPrice] = [] {
-        didSet {
-            tableView.reloadData()
-        }
+        didSet { tableView.reloadData() }
     }
     private var variations: [Double] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupView()
-        let input = ListBitcoinPricesViewModel.Input(viewWillAppear: rx.viewWillAppear.asObservable().map { _ in return })
+        let viewWillAppear = rx.viewWillAppear.asObservable().map { _ in return }
+        let input = ListBitcoinPricesViewModel.Input(viewWillAppear: viewWillAppear)
         let output = viewModel.transform(input: input)
         output.state.subscribe(onNext: { [weak self] state in
             switch state {
@@ -48,7 +46,8 @@ final class ListBitcoinPricesViewController: UIViewController {
     }
     
     private func setupView() {
-        tableView.register(UINib(nibName: bitcoinPriceCellName, bundle: nil), forCellReuseIdentifier: bitcoinPriceCellName)
+        tableView.register(UINib(nibName: bitcoinPriceCellName, bundle: nil),
+                           forCellReuseIdentifier: bitcoinPriceCellName)
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableHeaderView = realTimeHeaderView

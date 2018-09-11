@@ -8,6 +8,8 @@
 
 import Foundation
 
-final class CoinDeskResponse: Decodable {
+final class HistoricalBitcoinResponse: Decodable {
+    
     let bpi: [String: Double]
+    
 }

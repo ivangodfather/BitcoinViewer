@@ -9,9 +9,13 @@
 import Foundation
 
 final class RealTimeResponse: Decodable {
+    
     private let rate_float: Double
+    
 }
 
 extension RealTimeResponse {
+    
     var rate: Double { return rate_float }
+    
 }

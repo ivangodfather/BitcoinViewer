@@ -34,7 +34,9 @@ final class ListBitcoinPricesViewModel: ViewModelType {
             })
             .map { [currencyService] tuple in
                 let variations = currencyService.calculateVariation(list: tuple.0.map { $0.price })
-                return State.loaded(bitcoinPrices: tuple.0, realTime: tuple.1, variations: variations)
+                return State.loaded(bitcoinPrices: tuple.0,
+                                    realTime: tuple.1,
+                                    variations: variations)
             }
             .startWith(State.loading)
         
@@ -52,8 +54,8 @@ extension ListBitcoinPricesViewModel {
     struct Input {
         let viewWillAppear: Observable<()>
     }
-    
     struct Output {
         let state: Observable<State>
     }
+    
 }

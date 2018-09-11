@@ -9,6 +9,7 @@
 import Foundation
 
 extension Date {
+    
     var shortFormat: String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
@@ -24,4 +25,5 @@ extension Date {
     func remove(weeks: Int) -> Date {
         return self.addingTimeInterval(-Double(weeks) * 7 * 24 * 60 * 60)
     }
+    
 }

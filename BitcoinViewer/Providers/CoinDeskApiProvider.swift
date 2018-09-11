@@ -46,6 +46,4 @@ extension CoinDeskAPI: TargetType {
     
     var sampleData: Foundation.Data { return Foundation.Data() }
 
-    
-    
 }

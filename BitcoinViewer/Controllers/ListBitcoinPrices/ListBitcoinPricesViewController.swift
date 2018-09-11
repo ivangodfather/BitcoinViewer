@@ -37,11 +37,11 @@ final class ListBitcoinPricesViewController: UIViewController {
             case .loading:
                 self?.activityIndicatorView.startAnimating()
             case .loaded(let bitcoinPrices, let bitcoinRealTime, let variations):
-                self?.activityIndicatorView.stopAnimating()
                 self?.bitcoinPrices = bitcoinPrices
                 self?.variations = variations
                 bitcoinRealTime.subscribe(onNext: { bitcoinRealTime in
                     if let realTime = bitcoinRealTime {
+                        self?.activityIndicatorView.stopAnimating()
                         self?.realTimeHeaderView?.setup(bitcoinPrice: realTime)
                     }
                 }).disposed(by: strongSelf.rx.disposeBag)

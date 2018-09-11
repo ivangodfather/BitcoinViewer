@@ -8,7 +8,7 @@
 
 import XCTest
 import Nimble
-@testable import BitcoinViewer
+@testable import BitcoinEngine
 
 class BitcoinPriceTests: XCTestCase {
     

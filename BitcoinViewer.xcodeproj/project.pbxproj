@@ -11,7 +11,6 @@
 		18C65179E666CA0344B6A837 /* Pods_BitcoinViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */; };
 		4219C8192147BD30000FE60A /* BitcoinPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */; };
 		4219C8282147C34A000FE60A /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
-		4219C82F2147C34A000FE60A /* BitcoinEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */; };
 		4219C8312147C34A000FE60A /* BitcoinEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4219C8212147C34A000FE60A /* BitcoinEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4219C8342147C34A000FE60A /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
 		4219C8352147C34A000FE60A /* BitcoinEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -213,7 +212,6 @@
 		4219C8212147C34A000FE60A /* BitcoinEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcoinEngine.h; sourceTree = "<group>"; };
 		4219C8222147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4219C8272147C34A000FE60A /* BitcoinEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinEngineTests.swift; sourceTree = "<group>"; };
 		4219C8302147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitcoinViewer Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4239C4B22147D32500DAA892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -437,7 +435,8 @@
 		4219C82D2147C34A000FE60A /* BitcoinEngineTests */ = {
 			isa = PBXGroup;
 			children = (
-				4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */,
+				4219C8172147BD1B000FE60A /* Model */,
+				4219C8162147BAE9000FE60A /* Service */,
 				4219C8302147C34A000FE60A /* Info.plist */,
 			);
 			path = BitcoinEngineTests;
@@ -617,8 +616,6 @@
 		EF55C6C321468A8B00E44F8F /* BitcoinViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				4219C8172147BD1B000FE60A /* Model */,
-				4219C8162147BAE9000FE60A /* Service */,
 				EF55C6C621468A8B00E44F8F /* Info.plist */,
 			);
 			path = BitcoinViewerTests;
@@ -1209,7 +1206,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4219C82F2147C34A000FE60A /* BitcoinEngineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

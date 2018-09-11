@@ -45,3 +45,17 @@ target 'BitcoinViewer WatchKit Extension' do
   pod 'Moya/RxSwift'
 
 end
+
+target 'Bitcoin Widget' do
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    
+    # Pods for BitcoinViewer WatchKit Extension
+    pod 'RxSwift'
+    pod 'NSObject+Rx'
+    pod 'RxCocoa'
+    pod 'Moya/RxSwift'
+    pod 'RxViewController'
+    
+end

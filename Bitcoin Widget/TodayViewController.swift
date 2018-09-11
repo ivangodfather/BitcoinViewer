@@ -8,10 +8,12 @@
 
 import UIKit
 import NotificationCenter
+import BitcoinEngine
+import RxSwift
 import RxViewController
 import NSObject_Rx
 
-class TodayViewController: UIViewController, NCWidgetProviding {
+final class TodayViewController: UIViewController, NCWidgetProviding {
         
     @IBOutlet weak var textLabel: UILabel!
     private let viewModel = ListBitcoinPricesViewModel()
@@ -22,11 +24,14 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         let input = ListBitcoinPricesViewModel.Input(viewWillAppear: rx.viewWillAppear.asObservable().map { _ in return })
         let output = viewModel.transform(input: input)
         output.state.subscribe(onNext: { [weak self] state in
+            guard let strongSelf = self else { return }
             switch state {
             case .loading:
                 break
             case .loaded(_, let realTime, _):
-                self?.textLabel.text = realTime?.price.description
+                realTime.subscribe(onNext: { realTime in
+                    self?.textLabel.text = realTime?.price.description
+                }).disposed(by: strongSelf.rx.disposeBag)
             }
         }).disposed(by: rx.disposeBag)
     }

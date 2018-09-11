@@ -7,73 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		06F1EDC9356FB70A546BCC5C /* Pods_Bitcoin_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680DBED9E7483BA75DB854C /* Pods_Bitcoin_Widget.framework */; };
 		18C65179E666CA0344B6A837 /* Pods_BitcoinViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */; };
-		2450716D1E27F3235CE7E65F /* Pods_BitcoinViewer_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE222600B4FD730E6B7BF94 /* Pods_BitcoinViewer_WatchKit_Extension.framework */; };
-		371341AA4BF4DDC475E60428 /* Pods_BitcoinViewer_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B022DE4124AB03BB1636C4EB /* Pods_BitcoinViewer_WatchKit_App.framework */; };
 		4219C8192147BD30000FE60A /* BitcoinPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */; };
-		42442F632146AE20000B604C /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
-		42442F652146AED6000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
-		42442F682146AF75000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
-		42442F6B2146B618000B604C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
+		4219C8282147C34A000FE60A /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
+		4219C82F2147C34A000FE60A /* BitcoinEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */; };
+		4219C8312147C34A000FE60A /* BitcoinEngine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4219C8212147C34A000FE60A /* BitcoinEngine.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4219C8342147C34A000FE60A /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
+		4219C8352147C34A000FE60A /* BitcoinEngine.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4219C83D2147C419000FE60A /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
+		4219C83F2147C446000FE60A /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
+		4219C8402147C446000FE60A /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
+		4219C8412147C446000FE60A /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
+		4219C8422147C446000FE60A /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
+		4219C8432147C446000FE60A /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
+		4219C8442147C446000FE60A /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8E2147236C000B604C /* RealTimeResponse.swift */; };
+		4219C8452147C446000FE60A /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
+		4219C8462147C446000FE60A /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
+		4219C8472147C446000FE60A /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
+		4239C4B32147D32500DAA892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4239C4B22147D32500DAA892 /* Assets.xcassets */; };
+		4239C4BA2147D32600DAA892 /* BitcoinViewer Watch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 4239C4B92147D32600DAA892 /* BitcoinViewer Watch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4239C4C52147D32600DAA892 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4239C4C42147D32600DAA892 /* Assets.xcassets */; };
+		4239C4CA2147D32600DAA892 /* BitcoinViewer Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */; };
+		4239C4D22147D3B500DAA892 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6E821468A8D00E44F8F /* InterfaceController.swift */; };
+		4239C4D32147D3B500DAA892 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6EC21468A8D00E44F8F /* NotificationController.swift */; };
+		4239C4D42147D3B500DAA892 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6EA21468A8D00E44F8F /* ExtensionDelegate.swift */; };
+		4239C4D52147D40C00DAA892 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6D921468A8B00E44F8F /* Interface.storyboard */; };
+		4239C4D62147D44000DAA892 /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C70521468B9E00E44F8F /* RowController.swift */; };
+		4239C4E62147D6E400DAA892 /* BitcoinEngineWatch.h in Headers */ = {isa = PBXBuildFile; fileRef = 4239C4E42147D6E400DAA892 /* BitcoinEngineWatch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4239C4E92147D6E400DAA892 /* BitcoinEngineWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4239C4E22147D6E300DAA892 /* BitcoinEngineWatch.framework */; };
+		4239C4EA2147D6E400DAA892 /* BitcoinEngineWatch.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 4239C4E22147D6E300DAA892 /* BitcoinEngineWatch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4239C4EE2147D70200DAA892 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
+		4239C4EF2147D70200DAA892 /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
+		4239C4F02147D70200DAA892 /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
+		4239C4F12147D70200DAA892 /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
+		4239C4F22147D70200DAA892 /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
+		4239C4F32147D70200DAA892 /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
+		4239C4F42147D70200DAA892 /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
+		4239C4F52147D70200DAA892 /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8E2147236C000B604C /* RealTimeResponse.swift */; };
+		4239C4F62147D70200DAA892 /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
+		4239C4F72147D70200DAA892 /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
+		4239C4F82147D70200DAA892 /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
+		4239C4F92147F2E900DAA892 /* BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */; };
 		42442F6E2146B984000B604C /* ListBitcoinPricesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6D2146B984000B604C /* ListBitcoinPricesViewController.swift */; };
-		42442F752146BA76000B604C /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
-		42442F792146BB1B000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
 		42442F7B2146C10A000B604C /* BitcoinPriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F7A2146C10A000B604C /* BitcoinPriceTableViewCell.swift */; };
 		42442F7D2146C207000B604C /* BitcoinPriceTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42442F7C2146C207000B604C /* BitcoinPriceTableViewCell.xib */; };
-		42442F7E2147126D000B604C /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
-		42442F7F2147140B000B604C /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
-		42442F8021471413000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
-		42442F8121471441000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
-		42442F822147144D000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
-		42442F832147147E000B604C /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
-		42442F842147148D000B604C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
-		42442F8621471BC2000B604C /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
-		42442F8921471E83000B604C /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
-		42442F8B21471F6C000B604C /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
-		42442F8C21471F76000B604C /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
-		42442F8F2147236C000B604C /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8E2147236C000B604C /* RealTimeResponse.swift */; };
-		42442F9121472374000B604C /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8E2147236C000B604C /* RealTimeResponse.swift */; };
 		42442F9321472AD0000B604C /* RealTimeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F9221472AD0000B604C /* RealTimeHeaderView.swift */; };
 		42442F9521472ADA000B604C /* RealTimeHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 42442F9421472ADA000B604C /* RealTimeHeaderView.xib */; };
-		42442F99214739F9000B604C /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
-		42442F9A21473CB3000B604C /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
 		42442FA121474355000B604C /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42442FA021474355000B604C /* NotificationCenter.framework */; };
 		42442FA421474355000B604C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442FA321474355000B604C /* TodayViewController.swift */; };
 		42442FA721474355000B604C /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42442FA521474355000B604C /* MainInterface.storyboard */; };
 		42442FAB21474355000B604C /* Bitcoin Widget.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 42442F9F21474354000B604C /* Bitcoin Widget.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		42442FB021474543000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
-		42442FB121474549000B604C /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
-		42442FB221474549000B604C /* RealTimeResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8E2147236C000B604C /* RealTimeResponse.swift */; };
-		42442FB32147454D000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
-		42442FB42147454D000B604C /* DatabaseProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8521471BC2000B604C /* DatabaseProvider.swift */; };
-		42442FB521474553000B604C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F6A2146B618000B604C /* Date+Extension.swift */; };
-		42442FB621474553000B604C /* Encondable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F8A21471F6C000B604C /* Encondable+Extension.swift */; };
-		42442FB72147455A000B604C /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
-		42442FB82147455A000B604C /* CurrencyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F98214739F9000B604C /* CurrencyService.swift */; };
-		42442FB921474591000B604C /* ListBitcoinPricesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */; };
-		42442FBA2147463D000B604C /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
+		4252D64E2147C76D0094501F /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F782146BB1B000B604C /* ViewModelType.swift */; };
 		5339E636ED2CBCFC29DE70CC /* Pods_BitcoinViewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFE5ACBE877CA727274C0B8 /* Pods_BitcoinViewer.framework */; };
 		5CB6750A0C797E35AFFBC27C /* Pods_BitcoinViewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1EF6E1B9AB5370740B8CCCDD /* Pods_BitcoinViewerTests.framework */; };
-		7E1FF7406C3E8AC351206AD2 /* Pods_Bitcoin_Widget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E680DBED9E7483BA75DB854C /* Pods_Bitcoin_Widget.framework */; };
+		663F4AD9C7BA5AC70E606CEE /* Pods_BitcoinEngine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FD957B32AF692B7903354DD /* Pods_BitcoinEngine.framework */; };
+		70AFAE112C7CF6F219169C32 /* Pods_BitcoinEngineWatch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF64AE7E8E1EE16B094B5945 /* Pods_BitcoinEngineWatch.framework */; };
+		C02C45CC02F899B76DB2C1D0 /* Pods_BitcoinViewer_Watch_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 151746E38A9AA20167772259 /* Pods_BitcoinViewer_Watch_Extension.framework */; };
 		EF55C6B021468A8700E44F8F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6AF21468A8600E44F8F /* AppDelegate.swift */; };
 		EF55C6B521468A8700E44F8F /* ListBitcoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B321468A8700E44F8F /* ListBitcoin.storyboard */; };
 		EF55C6B721468A8B00E44F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B621468A8B00E44F8F /* Assets.xcassets */; };
 		EF55C6BA21468A8B00E44F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B821468A8B00E44F8F /* LaunchScreen.storyboard */; };
 		EF55C6C521468A8B00E44F8F /* CurrencyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6C421468A8B00E44F8F /* CurrencyServiceTests.swift */; };
 		EF55C6D021468A8B00E44F8F /* BitcoinViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6CF21468A8B00E44F8F /* BitcoinViewerUITests.swift */; };
-		EF55C6D521468A8B00E44F8F /* BitcoinViewer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF55C6D421468A8B00E44F8F /* BitcoinViewer WatchKit App.app */; };
-		EF55C6DB21468A8B00E44F8F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6D921468A8B00E44F8F /* Interface.storyboard */; };
-		EF55C6DD21468A8C00E44F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6DC21468A8C00E44F8F /* Assets.xcassets */; };
-		EF55C6E421468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EF55C6E321468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		EF55C6E921468A8D00E44F8F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6E821468A8D00E44F8F /* InterfaceController.swift */; };
-		EF55C6EB21468A8D00E44F8F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6EA21468A8D00E44F8F /* ExtensionDelegate.swift */; };
-		EF55C6ED21468A8D00E44F8F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6EC21468A8D00E44F8F /* NotificationController.swift */; };
-		EF55C6EF21468A8D00E44F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6EE21468A8D00E44F8F /* Assets.xcassets */; };
-		EF55C70621468B9E00E44F8F /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C70521468B9E00E44F8F /* RowController.swift */; };
-		EF775A3D21469ACB004A04D3 /* BitcoinService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF775A3C21469ACB004A04D3 /* BitcoinService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		4219C8292147C34A000FE60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4219C81E2147C34A000FE60A;
+			remoteInfo = BitcoinEngine;
+		};
+		4219C82B2147C34A000FE60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF55C6AB21468A8600E44F8F;
+			remoteInfo = BitcoinViewer;
+		};
+		4219C8322147C34A000FE60A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4219C81E2147C34A000FE60A;
+			remoteInfo = BitcoinEngine;
+		};
+		4239C4BB2147D32600DAA892 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4239C4B82147D32600DAA892;
+			remoteInfo = "BitcoinViewer Watch Extension";
+		};
+		4239C4C82147D32600DAA892 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4239C4AC2147D32400DAA892;
+			remoteInfo = "BitcoinViewer Watch";
+		};
+		4239C4E72147D6E400DAA892 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4239C4E12147D6E300DAA892;
+			remoteInfo = BitcoinEngineWatch;
+		};
 		42442FA921474355000B604C /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
@@ -95,23 +136,42 @@
 			remoteGlobalIDString = EF55C6AB21468A8600E44F8F;
 			remoteInfo = BitcoinViewer;
 		};
-		EF55C6D621468A8B00E44F8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF55C6D321468A8B00E44F8F;
-			remoteInfo = "BitcoinViewer WatchKit App";
-		};
-		EF55C6E521468A8C00E44F8F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = EF55C6A421468A8600E44F8F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = EF55C6E221468A8C00E44F8F;
-			remoteInfo = "BitcoinViewer WatchKit Extension";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		4219C8392147C34A000FE60A /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4219C8352147C34A000FE60A /* BitcoinEngine.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4CE2147D32600DAA892 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				4239C4BA2147D32600DAA892 /* BitcoinViewer Watch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4DC2147D5BB00DAA892 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				4239C4EA2147D6E400DAA892 /* BitcoinEngineWatch.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42442FAF21474355000B604C /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -123,24 +183,13 @@
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF55C6F721468A8D00E44F8F /* Embed App Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				EF55C6E421468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex in Embed App Extensions */,
-			);
-			name = "Embed App Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		EF55C6FB21468A8D00E44F8F /* Embed Watch Content */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				EF55C6D521468A8B00E44F8F /* BitcoinViewer WatchKit App.app in Embed Watch Content */,
+				4239C4CA2147D32600DAA892 /* BitcoinViewer Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -148,14 +197,34 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		05420C27A35AC3FA50CBB486 /* Pods-Bitcoin Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Widget/Pods-Bitcoin Widget.debug.xcconfig"; sourceTree = "<group>"; };
 		08304BAC24612EB1311B6336 /* Pods-BitcoinViewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer/Pods-BitcoinViewer.release.xcconfig"; sourceTree = "<group>"; };
 		149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		151746E38A9AA20167772259 /* Pods_BitcoinViewer_Watch_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_Watch_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		17B834CDF4250EE2C2AED4B3 /* Pods-BitcoinViewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerTests/Pods-BitcoinViewerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		1BFE5ACBE877CA727274C0B8 /* Pods_BitcoinViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D95470D31C0215A9A966291 /* Pods-BitcoinViewer Watch Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer Watch Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer Watch Extension/Pods-BitcoinViewer Watch Extension.debug.xcconfig"; sourceTree = "<group>"; };
 		1EF6E1B9AB5370740B8CCCDD /* Pods_BitcoinViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2421F265953B4FFD47E8395B /* Pods-BitcoinViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerUITests/Pods-BitcoinViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		2F1F67BBA287414146FF5D95 /* Pods-BitcoinEngine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngine.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngine/Pods-BitcoinEngine.release.xcconfig"; sourceTree = "<group>"; };
+		30DF962E55D584C5822561FB /* Pods-BitcoinEngineWatch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngineWatch.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngineWatch/Pods-BitcoinEngineWatch.release.xcconfig"; sourceTree = "<group>"; };
+		316F850D0D0715F6E2ECA420 /* Pods-BitcoinEngine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngine/Pods-BitcoinEngine.debug.xcconfig"; sourceTree = "<group>"; };
 		4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceTests.swift; sourceTree = "<group>"; };
+		4219C81F2147C34A000FE60A /* BitcoinEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4219C8212147C34A000FE60A /* BitcoinEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcoinEngine.h; sourceTree = "<group>"; };
+		4219C8222147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4219C8272147C34A000FE60A /* BitcoinEngineTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinEngineTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinEngineTests.swift; sourceTree = "<group>"; };
+		4219C8302147C34A000FE60A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitcoinViewer Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4239C4B22147D32500DAA892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4239C4B42147D32500DAA892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4239C4B92147D32600DAA892 /* BitcoinViewer Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitcoinViewer Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4239C4C42147D32600DAA892 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4239C4C62147D32600DAA892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4239C4C72147D32600DAA892 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		4239C4E22147D6E300DAA892 /* BitcoinEngineWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BitcoinEngineWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4239C4E42147D6E400DAA892 /* BitcoinEngineWatch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BitcoinEngineWatch.h; sourceTree = "<group>"; };
+		4239C4E52147D6E400DAA892 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalBitcoinResponse.swift; sourceTree = "<group>"; };
 		42442F642146AED6000B604C /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		42442F672146AF75000B604C /* CoinDeskApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskApiProvider.swift; sourceTree = "<group>"; };
@@ -177,11 +246,16 @@
 		42442FA621474355000B604C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		42442FA821474355000B604C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5907085891B77B99E4A2773D /* Pods-BitcoinViewer WatchKit Extension.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit Extension.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension.debug.xcconfig"; sourceTree = "<group>"; };
+		5FD957B32AF692B7903354DD /* Pods_BitcoinEngine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinEngine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		73D30B87374DDBC0905A4D1D /* Pods-BitcoinViewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer/Pods-BitcoinViewer.debug.xcconfig"; sourceTree = "<group>"; };
 		7CE222600B4FD730E6B7BF94 /* Pods_BitcoinViewer_WatchKit_Extension.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_WatchKit_Extension.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D65286AD065431CF3231A6B /* Pods_BitcoinViewer_Watch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_Watch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8FD2A8310A476FF3C01723E2 /* Pods-Bitcoin Widget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Widget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Widget/Pods-Bitcoin Widget.debug.xcconfig"; sourceTree = "<group>"; };
+		9D30F6E1A87AFB9EE2C16E17 /* Pods-BitcoinViewer Watch Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer Watch Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer Watch Extension/Pods-BitcoinViewer Watch Extension.release.xcconfig"; sourceTree = "<group>"; };
+		9D84A7FFD99EDC4BC7C297B6 /* Pods-Bitcoin Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Widget/Pods-Bitcoin Widget.release.xcconfig"; sourceTree = "<group>"; };
 		9EEA6C28FCC5EC85397A5DE9 /* Pods-BitcoinViewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerTests/Pods-BitcoinViewerTests.release.xcconfig"; sourceTree = "<group>"; };
+		A8EBE190369B1EBE00044457 /* Pods-BitcoinEngineWatch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinEngineWatch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinEngineWatch/Pods-BitcoinEngineWatch.debug.xcconfig"; sourceTree = "<group>"; };
 		B022DE4124AB03BB1636C4EB /* Pods_BitcoinViewer_WatchKit_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer_WatchKit_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B2F84E21D8F71E1E96D70AA6 /* Pods-Bitcoin Widget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitcoin Widget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitcoin Widget/Pods-Bitcoin Widget.release.xcconfig"; sourceTree = "<group>"; };
 		BC42237F1F591D788A596E71 /* Pods-BitcoinViewer WatchKit App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit App.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit App/Pods-BitcoinViewer WatchKit App.release.xcconfig"; sourceTree = "<group>"; };
 		CC7DF3160AD2BB34AE532EF7 /* Pods-BitcoinViewerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerUITests/Pods-BitcoinViewerUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E4361B6640D6504B7F5775C1 /* Pods-BitcoinViewer WatchKit Extension.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit Extension.release.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension.release.xcconfig"; sourceTree = "<group>"; };
@@ -198,28 +272,54 @@
 		EF55C6CB21468A8B00E44F8F /* BitcoinViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55C6CF21468A8B00E44F8F /* BitcoinViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinViewerUITests.swift; sourceTree = "<group>"; };
 		EF55C6D121468A8B00E44F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF55C6D421468A8B00E44F8F /* BitcoinViewer WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BitcoinViewer WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55C6DA21468A8B00E44F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
-		EF55C6DC21468A8C00E44F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF55C6DE21468A8C00E44F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF55C6E321468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "BitcoinViewer WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55C6E821468A8D00E44F8F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
 		EF55C6EA21468A8D00E44F8F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
 		EF55C6EC21468A8D00E44F8F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
-		EF55C6EE21468A8D00E44F8F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		EF55C6F021468A8D00E44F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EF55C6F121468A8D00E44F8F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		EF55C70521468B9E00E44F8F /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		EF775A3C21469ACB004A04D3 /* BitcoinService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinService.swift; sourceTree = "<group>"; };
 		FB6CA95FC97DD3600B994906 /* Pods-BitcoinViewer WatchKit App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewer WatchKit App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewer WatchKit App/Pods-BitcoinViewer WatchKit App.debug.xcconfig"; sourceTree = "<group>"; };
+		FF64AE7E8E1EE16B094B5945 /* Pods_BitcoinEngineWatch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinEngineWatch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		00B4402AB52C8169B39525C3 /* Frameworks */ = {
+		3ABEDB6D90FD2644E295FF38 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				371341AA4BF4DDC475E60428 /* Pods_BitcoinViewer_WatchKit_App.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4219C81B2147C34A000FE60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				663F4AD9C7BA5AC70E606CEE /* Pods_BitcoinEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4219C8242147C34A000FE60A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4219C8282147C34A000FE60A /* BitcoinEngine.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4B62147D32600DAA892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C02C45CC02F899B76DB2C1D0 /* Pods_BitcoinViewer_Watch_Extension.framework in Frameworks */,
+				4239C4E92147D6E400DAA892 /* BitcoinEngineWatch.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4DE2147D6E300DAA892 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70AFAE112C7CF6F219169C32 /* Pods_BitcoinEngineWatch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,8 +327,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4239C4F92147F2E900DAA892 /* BitcoinEngine.framework in Frameworks */,
 				42442FA121474355000B604C /* NotificationCenter.framework in Frameworks */,
-				7E1FF7406C3E8AC351206AD2 /* Pods_Bitcoin_Widget.framework in Frameworks */,
+				06F1EDC9356FB70A546BCC5C /* Pods_Bitcoin_Widget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5339E636ED2CBCFC29DE70CC /* Pods_BitcoinViewer.framework in Frameworks */,
+				4219C8342147C34A000FE60A /* BitcoinEngine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,14 +358,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF55C6E021468A8C00E44F8F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2450716D1E27F3235CE7E65F /* Pods_BitcoinViewer_WatchKit_Extension.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -277,6 +371,10 @@
 				149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */,
 				42442FA021474355000B604C /* NotificationCenter.framework */,
 				E680DBED9E7483BA75DB854C /* Pods_Bitcoin_Widget.framework */,
+				5FD957B32AF692B7903354DD /* Pods_BitcoinEngine.framework */,
+				7D65286AD065431CF3231A6B /* Pods_BitcoinViewer_Watch.framework */,
+				151746E38A9AA20167772259 /* Pods_BitcoinViewer_Watch_Extension.framework */,
+				FF64AE7E8E1EE16B094B5945 /* Pods_BitcoinEngineWatch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -294,8 +392,14 @@
 				9EEA6C28FCC5EC85397A5DE9 /* Pods-BitcoinViewerTests.release.xcconfig */,
 				2421F265953B4FFD47E8395B /* Pods-BitcoinViewerUITests.debug.xcconfig */,
 				CC7DF3160AD2BB34AE532EF7 /* Pods-BitcoinViewerUITests.release.xcconfig */,
-				05420C27A35AC3FA50CBB486 /* Pods-Bitcoin Widget.debug.xcconfig */,
-				B2F84E21D8F71E1E96D70AA6 /* Pods-Bitcoin Widget.release.xcconfig */,
+				316F850D0D0715F6E2ECA420 /* Pods-BitcoinEngine.debug.xcconfig */,
+				2F1F67BBA287414146FF5D95 /* Pods-BitcoinEngine.release.xcconfig */,
+				8FD2A8310A476FF3C01723E2 /* Pods-Bitcoin Widget.debug.xcconfig */,
+				9D84A7FFD99EDC4BC7C297B6 /* Pods-Bitcoin Widget.release.xcconfig */,
+				1D95470D31C0215A9A966291 /* Pods-BitcoinViewer Watch Extension.debug.xcconfig */,
+				9D30F6E1A87AFB9EE2C16E17 /* Pods-BitcoinViewer Watch Extension.release.xcconfig */,
+				A8EBE190369B1EBE00044457 /* Pods-BitcoinEngineWatch.debug.xcconfig */,
+				30DF962E55D584C5822561FB /* Pods-BitcoinEngineWatch.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -314,6 +418,71 @@
 				4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		4219C8202147C34A000FE60A /* BitcoinEngine */ = {
+			isa = PBXGroup;
+			children = (
+				4219C83E2147C41C000FE60A /* ViewModel */,
+				42442F692146B602000B604C /* Extensions */,
+				42442F662146AF5F000B604C /* Providers */,
+				42442F612146AE11000B604C /* Model */,
+				EF775A3B21469A9F004A04D3 /* Services */,
+				4219C8212147C34A000FE60A /* BitcoinEngine.h */,
+				4219C8222147C34A000FE60A /* Info.plist */,
+			);
+			path = BitcoinEngine;
+			sourceTree = "<group>";
+		};
+		4219C82D2147C34A000FE60A /* BitcoinEngineTests */ = {
+			isa = PBXGroup;
+			children = (
+				4219C82E2147C34A000FE60A /* BitcoinEngineTests.swift */,
+				4219C8302147C34A000FE60A /* Info.plist */,
+			);
+			path = BitcoinEngineTests;
+			sourceTree = "<group>";
+		};
+		4219C83E2147C41C000FE60A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				42442F782146BB1B000B604C /* ViewModelType.swift */,
+				42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4239C4AE2147D32400DAA892 /* BitcoinViewer Watch */ = {
+			isa = PBXGroup;
+			children = (
+				EF55C6D921468A8B00E44F8F /* Interface.storyboard */,
+				4239C4B22147D32500DAA892 /* Assets.xcassets */,
+				4239C4B42147D32500DAA892 /* Info.plist */,
+			);
+			path = "BitcoinViewer Watch";
+			sourceTree = "<group>";
+		};
+		4239C4BD2147D32600DAA892 /* BitcoinViewer Watch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EF55C6E821468A8D00E44F8F /* InterfaceController.swift */,
+				EF55C6EA21468A8D00E44F8F /* ExtensionDelegate.swift */,
+				EF55C6EC21468A8D00E44F8F /* NotificationController.swift */,
+				EF55C70521468B9E00E44F8F /* RowController.swift */,
+				4239C4C42147D32600DAA892 /* Assets.xcassets */,
+				4239C4C62147D32600DAA892 /* Info.plist */,
+				4239C4C72147D32600DAA892 /* PushNotificationPayload.apns */,
+			);
+			path = "BitcoinViewer Watch Extension";
+			sourceTree = "<group>";
+		};
+		4239C4E32147D6E300DAA892 /* BitcoinEngineWatch */ = {
+			isa = PBXGroup;
+			children = (
+				4239C4E42147D6E400DAA892 /* BitcoinEngineWatch.h */,
+				4239C4E52147D6E400DAA892 /* Info.plist */,
+			);
+			path = BitcoinEngineWatch;
 			sourceTree = "<group>";
 		};
 		42442F612146AE11000B604C /* Model */ = {
@@ -367,7 +536,6 @@
 			children = (
 				EF55C6B321468A8700E44F8F /* ListBitcoin.storyboard */,
 				42442F6D2146B984000B604C /* ListBitcoinPricesViewController.swift */,
-				42442F742146BA76000B604C /* ListBitcoinPricesViewModel.swift */,
 			);
 			path = ListBitcoinPrices;
 			sourceTree = "<group>";
@@ -378,7 +546,6 @@
 				EF55C6B621468A8B00E44F8F /* Assets.xcassets */,
 				EF55C6B821468A8B00E44F8F /* LaunchScreen.storyboard */,
 				EF55C6AF21468A8600E44F8F /* AppDelegate.swift */,
-				42442F782146BB1B000B604C /* ViewModelType.swift */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -408,9 +575,12 @@
 				EF55C6AE21468A8600E44F8F /* BitcoinViewer */,
 				EF55C6C321468A8B00E44F8F /* BitcoinViewerTests */,
 				EF55C6CE21468A8B00E44F8F /* BitcoinViewerUITests */,
-				EF55C6D821468A8B00E44F8F /* BitcoinViewer WatchKit App */,
-				EF55C6E721468A8C00E44F8F /* BitcoinViewer WatchKit Extension */,
 				42442FA221474355000B604C /* Bitcoin Widget */,
+				4239C4AE2147D32400DAA892 /* BitcoinViewer Watch */,
+				4239C4BD2147D32600DAA892 /* BitcoinViewer Watch Extension */,
+				4219C8202147C34A000FE60A /* BitcoinEngine */,
+				4219C82D2147C34A000FE60A /* BitcoinEngineTests */,
+				4239C4E32147D6E300DAA892 /* BitcoinEngineWatch */,
 				EF55C6AD21468A8600E44F8F /* Products */,
 				37CD597975C0587C23ACC1A5 /* Pods */,
 				00E03998C3A0804D8FF3B520 /* Frameworks */,
@@ -423,9 +593,12 @@
 				EF55C6AC21468A8600E44F8F /* BitcoinViewer.app */,
 				EF55C6C021468A8B00E44F8F /* BitcoinViewerTests.xctest */,
 				EF55C6CB21468A8B00E44F8F /* BitcoinViewerUITests.xctest */,
-				EF55C6D421468A8B00E44F8F /* BitcoinViewer WatchKit App.app */,
-				EF55C6E321468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex */,
 				42442F9F21474354000B604C /* Bitcoin Widget.appex */,
+				4219C81F2147C34A000FE60A /* BitcoinEngine.framework */,
+				4219C8272147C34A000FE60A /* BitcoinEngineTests.xctest */,
+				4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */,
+				4239C4B92147D32600DAA892 /* BitcoinViewer Watch Extension.appex */,
+				4239C4E22147D6E300DAA892 /* BitcoinEngineWatch.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -436,10 +609,6 @@
 				42442F772146BACD000B604C /* Support */,
 				42442F6F2146B999000B604C /* Views */,
 				42442F6C2146B96B000B604C /* Controllers */,
-				42442F692146B602000B604C /* Extensions */,
-				42442F662146AF5F000B604C /* Providers */,
-				42442F612146AE11000B604C /* Model */,
-				EF775A3B21469A9F004A04D3 /* Services */,
 				EF55C6BB21468A8B00E44F8F /* Info.plist */,
 			);
 			path = BitcoinViewer;
@@ -464,30 +633,6 @@
 			path = BitcoinViewerUITests;
 			sourceTree = "<group>";
 		};
-		EF55C6D821468A8B00E44F8F /* BitcoinViewer WatchKit App */ = {
-			isa = PBXGroup;
-			children = (
-				EF55C6D921468A8B00E44F8F /* Interface.storyboard */,
-				EF55C6DC21468A8C00E44F8F /* Assets.xcassets */,
-				EF55C6DE21468A8C00E44F8F /* Info.plist */,
-			);
-			path = "BitcoinViewer WatchKit App";
-			sourceTree = "<group>";
-		};
-		EF55C6E721468A8C00E44F8F /* BitcoinViewer WatchKit Extension */ = {
-			isa = PBXGroup;
-			children = (
-				EF55C6E821468A8D00E44F8F /* InterfaceController.swift */,
-				EF55C6EA21468A8D00E44F8F /* ExtensionDelegate.swift */,
-				EF55C6EC21468A8D00E44F8F /* NotificationController.swift */,
-				EF55C6EE21468A8D00E44F8F /* Assets.xcassets */,
-				EF55C6F021468A8D00E44F8F /* Info.plist */,
-				EF55C6F121468A8D00E44F8F /* PushNotificationPayload.apns */,
-				EF55C70521468B9E00E44F8F /* RowController.swift */,
-			);
-			path = "BitcoinViewer WatchKit Extension";
-			sourceTree = "<group>";
-		};
 		EF775A3B21469A9F004A04D3 /* Services */ = {
 			isa = PBXGroup;
 			children = (
@@ -499,12 +644,127 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		4219C81C2147C34A000FE60A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4219C8312147C34A000FE60A /* BitcoinEngine.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4DF2147D6E300DAA892 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4239C4E62147D6E400DAA892 /* BitcoinEngineWatch.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		4219C81E2147C34A000FE60A /* BitcoinEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4219C8362147C34A000FE60A /* Build configuration list for PBXNativeTarget "BitcoinEngine" */;
+			buildPhases = (
+				2BE04B133581986684A9BAFA /* [CP] Check Pods Manifest.lock */,
+				4219C81A2147C34A000FE60A /* Sources */,
+				4219C81B2147C34A000FE60A /* Frameworks */,
+				4219C81C2147C34A000FE60A /* Headers */,
+				4219C81D2147C34A000FE60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitcoinEngine;
+			productName = BitcoinEngine;
+			productReference = 4219C81F2147C34A000FE60A /* BitcoinEngine.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4219C8262147C34A000FE60A /* BitcoinEngineTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4219C83A2147C34A000FE60A /* Build configuration list for PBXNativeTarget "BitcoinEngineTests" */;
+			buildPhases = (
+				4219C8232147C34A000FE60A /* Sources */,
+				4219C8242147C34A000FE60A /* Frameworks */,
+				4219C8252147C34A000FE60A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4219C82A2147C34A000FE60A /* PBXTargetDependency */,
+				4219C82C2147C34A000FE60A /* PBXTargetDependency */,
+			);
+			name = BitcoinEngineTests;
+			productName = BitcoinEngineTests;
+			productReference = 4219C8272147C34A000FE60A /* BitcoinEngineTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4239C4AC2147D32400DAA892 /* BitcoinViewer Watch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4239C4CF2147D32600DAA892 /* Build configuration list for PBXNativeTarget "BitcoinViewer Watch" */;
+			buildPhases = (
+				4239C4AB2147D32400DAA892 /* Resources */,
+				4239C4CE2147D32600DAA892 /* Embed App Extensions */,
+				3ABEDB6D90FD2644E295FF38 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4239C4BC2147D32600DAA892 /* PBXTargetDependency */,
+			);
+			name = "BitcoinViewer Watch";
+			productName = "BitcoinViewer Watch";
+			productReference = 4239C4AD2147D32400DAA892 /* BitcoinViewer Watch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		4239C4B82147D32600DAA892 /* BitcoinViewer Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4239C4CB2147D32600DAA892 /* Build configuration list for PBXNativeTarget "BitcoinViewer Watch Extension" */;
+			buildPhases = (
+				600931A46E9F7B2D4DF51C01 /* [CP] Check Pods Manifest.lock */,
+				4239C4B52147D32600DAA892 /* Sources */,
+				4239C4B62147D32600DAA892 /* Frameworks */,
+				4239C4B72147D32600DAA892 /* Resources */,
+				AAB28635741E81B75292B567 /* [CP] Embed Pods Frameworks */,
+				4239C4DC2147D5BB00DAA892 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4239C4E82147D6E400DAA892 /* PBXTargetDependency */,
+			);
+			name = "BitcoinViewer Watch Extension";
+			productName = "BitcoinViewer Watch Extension";
+			productReference = 4239C4B92147D32600DAA892 /* BitcoinViewer Watch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
+		4239C4E12147D6E300DAA892 /* BitcoinEngineWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4239C4ED2147D6E400DAA892 /* Build configuration list for PBXNativeTarget "BitcoinEngineWatch" */;
+			buildPhases = (
+				BE5B368D354DD2940127047D /* [CP] Check Pods Manifest.lock */,
+				4239C4DD2147D6E300DAA892 /* Sources */,
+				4239C4DE2147D6E300DAA892 /* Frameworks */,
+				4239C4DF2147D6E300DAA892 /* Headers */,
+				4239C4E02147D6E300DAA892 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BitcoinEngineWatch;
+			productName = BitcoinEngineWatch;
+			productReference = 4239C4E22147D6E300DAA892 /* BitcoinEngineWatch.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		42442F9E21474354000B604C /* Bitcoin Widget */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 42442FAC21474355000B604C /* Build configuration list for PBXNativeTarget "Bitcoin Widget" */;
 			buildPhases = (
-				42F180F651028F6D74A741CB /* [CP] Check Pods Manifest.lock */,
+				8CC6F79F53952BF66B84AF5E /* [CP] Check Pods Manifest.lock */,
 				42442F9B21474354000B604C /* Sources */,
 				42442F9C21474354000B604C /* Frameworks */,
 				42442F9D21474354000B604C /* Resources */,
@@ -529,12 +789,14 @@
 				EF55C6FB21468A8D00E44F8F /* Embed Watch Content */,
 				E2F2A02B66FD508D6ECFE2A6 /* [CP] Embed Pods Frameworks */,
 				42442FAF21474355000B604C /* Embed App Extensions */,
+				4219C8392147C34A000FE60A /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				EF55C6D721468A8B00E44F8F /* PBXTargetDependency */,
 				42442FAA21474355000B604C /* PBXTargetDependency */,
+				4219C8332147C34A000FE60A /* PBXTargetDependency */,
+				4239C4C92147D32600DAA892 /* PBXTargetDependency */,
 			);
 			name = BitcoinViewer;
 			productName = BitcoinViewer;
@@ -580,44 +842,6 @@
 			productReference = EF55C6CB21468A8B00E44F8F /* BitcoinViewerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		EF55C6D321468A8B00E44F8F /* BitcoinViewer WatchKit App */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF55C6F821468A8D00E44F8F /* Build configuration list for PBXNativeTarget "BitcoinViewer WatchKit App" */;
-			buildPhases = (
-				97C8053923DB5107E0EE4F7D /* [CP] Check Pods Manifest.lock */,
-				EF55C6D221468A8B00E44F8F /* Resources */,
-				EF55C6F721468A8D00E44F8F /* Embed App Extensions */,
-				00B4402AB52C8169B39525C3 /* Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				EF55C6E621468A8C00E44F8F /* PBXTargetDependency */,
-			);
-			name = "BitcoinViewer WatchKit App";
-			productName = "BitcoinViewer WatchKit App";
-			productReference = EF55C6D421468A8B00E44F8F /* BitcoinViewer WatchKit App.app */;
-			productType = "com.apple.product-type.application.watchapp2";
-		};
-		EF55C6E221468A8C00E44F8F /* BitcoinViewer WatchKit Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = EF55C6F421468A8D00E44F8F /* Build configuration list for PBXNativeTarget "BitcoinViewer WatchKit Extension" */;
-			buildPhases = (
-				2E5984439253E0EA6E4ECB65 /* [CP] Check Pods Manifest.lock */,
-				EF55C6DF21468A8C00E44F8F /* Sources */,
-				EF55C6E021468A8C00E44F8F /* Frameworks */,
-				EF55C6E121468A8C00E44F8F /* Resources */,
-				5C27018CD998E8513EB9D925 /* [CP] Embed Pods Frameworks */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "BitcoinViewer WatchKit Extension";
-			productName = "BitcoinViewer WatchKit Extension";
-			productReference = EF55C6E321468A8C00E44F8F /* BitcoinViewer WatchKit Extension.appex */;
-			productType = "com.apple.product-type.watchkit2-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -628,6 +852,22 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Netquest;
 				TargetAttributes = {
+					4219C81E2147C34A000FE60A = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4219C8262147C34A000FE60A = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = EF55C6AB21468A8600E44F8F;
+					};
+					4239C4AC2147D32400DAA892 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4239C4B82147D32600DAA892 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
+					4239C4E12147D6E300DAA892 = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					42442F9E21474354000B604C = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -641,12 +881,6 @@
 					EF55C6CA21468A8B00E44F8F = {
 						CreatedOnToolsVersion = 9.4.1;
 						TestTargetID = EF55C6AB21468A8600E44F8F;
-					};
-					EF55C6D321468A8B00E44F8F = {
-						CreatedOnToolsVersion = 9.4.1;
-					};
-					EF55C6E221468A8C00E44F8F = {
-						CreatedOnToolsVersion = 9.4.1;
 					};
 				};
 			};
@@ -666,14 +900,55 @@
 				EF55C6AB21468A8600E44F8F /* BitcoinViewer */,
 				EF55C6BF21468A8B00E44F8F /* BitcoinViewerTests */,
 				EF55C6CA21468A8B00E44F8F /* BitcoinViewerUITests */,
-				EF55C6D321468A8B00E44F8F /* BitcoinViewer WatchKit App */,
-				EF55C6E221468A8C00E44F8F /* BitcoinViewer WatchKit Extension */,
 				42442F9E21474354000B604C /* Bitcoin Widget */,
+				4219C81E2147C34A000FE60A /* BitcoinEngine */,
+				4219C8262147C34A000FE60A /* BitcoinEngineTests */,
+				4239C4AC2147D32400DAA892 /* BitcoinViewer Watch */,
+				4239C4B82147D32600DAA892 /* BitcoinViewer Watch Extension */,
+				4239C4E12147D6E300DAA892 /* BitcoinEngineWatch */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4219C81D2147C34A000FE60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4219C8252147C34A000FE60A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4AB2147D32400DAA892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4239C4D52147D40C00DAA892 /* Interface.storyboard in Resources */,
+				4239C4B32147D32500DAA892 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4B72147D32600DAA892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4239C4C52147D32600DAA892 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4E02147D6E300DAA892 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42442F9D21474354000B604C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -708,27 +983,10 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF55C6D221468A8B00E44F8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF55C6DD21468A8C00E44F8F /* Assets.xcassets in Resources */,
-				EF55C6DB21468A8B00E44F8F /* Interface.storyboard in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EF55C6E121468A8C00E44F8F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				EF55C6EF21468A8D00E44F8F /* Assets.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2E5984439253E0EA6E4ECB65 /* [CP] Check Pods Manifest.lock */ = {
+		2BE04B133581986684A9BAFA /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -739,7 +997,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitcoinViewer WatchKit Extension-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BitcoinEngine-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -782,7 +1040,25 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewerTests/Pods-BitcoinViewerTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		42F180F651028F6D74A741CB /* [CP] Check Pods Manifest.lock */ = {
+		600931A46E9F7B2D4DF51C01 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BitcoinViewer Watch Extension-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8CC6F79F53952BF66B84AF5E /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -800,35 +1076,31 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		5C27018CD998E8513EB9D925 /* [CP] Embed Pods Frameworks */ = {
+		AAB28635741E81B75292B567 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer Watch Extension/Pods-BitcoinViewer Watch Extension-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-watchOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-watchOS/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NSObject+Rx-watchOS/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/Result-watchOS/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-watchOS/RxCocoa.framework",
-				"${BUILT_PRODUCTS_DIR}/RxSwift-watchOS/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NSObject_Rx.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer WatchKit Extension/Pods-BitcoinViewer WatchKit Extension-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer Watch Extension/Pods-BitcoinViewer Watch Extension-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		97C8053923DB5107E0EE4F7D /* [CP] Check Pods Manifest.lock */ = {
+		BE5B368D354DD2940127047D /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -839,7 +1111,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-BitcoinViewer WatchKit App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-BitcoinEngineWatch-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -891,9 +1163,9 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewer/Pods-BitcoinViewer-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire-iOS/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/Moya-iOS/Moya.framework",
-				"${BUILT_PRODUCTS_DIR}/NSObject+Rx-iOS/NSObject_Rx.framework",
+				"${BUILT_PRODUCTS_DIR}/NSObject+Rx/NSObject_Rx.framework",
 				"${BUILT_PRODUCTS_DIR}/Result-iOS/Result.framework",
-				"${BUILT_PRODUCTS_DIR}/RxCocoa-iOS/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift-iOS/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/RxViewController/RxViewController.framework",
 			);
@@ -915,22 +1187,66 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4219C81A2147C34A000FE60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4252D64E2147C76D0094501F /* ViewModelType.swift in Sources */,
+				4219C8472147C446000FE60A /* CurrencyService.swift in Sources */,
+				4219C8452147C446000FE60A /* BitcoinPrice.swift in Sources */,
+				4219C8462147C446000FE60A /* BitcoinService.swift in Sources */,
+				4219C83D2147C419000FE60A /* ListBitcoinPricesViewModel.swift in Sources */,
+				4219C8442147C446000FE60A /* RealTimeResponse.swift in Sources */,
+				4219C8412147C446000FE60A /* CoinDeskApiProvider.swift in Sources */,
+				4219C83F2147C446000FE60A /* Date+Extension.swift in Sources */,
+				4219C8432147C446000FE60A /* HistoricalBitcoinResponse.swift in Sources */,
+				4219C8422147C446000FE60A /* DatabaseProvider.swift in Sources */,
+				4219C8402147C446000FE60A /* Encondable+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4219C8232147C34A000FE60A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4219C82F2147C34A000FE60A /* BitcoinEngineTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4B52147D32600DAA892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4239C4D32147D3B500DAA892 /* NotificationController.swift in Sources */,
+				4239C4D22147D3B500DAA892 /* InterfaceController.swift in Sources */,
+				4239C4D62147D44000DAA892 /* RowController.swift in Sources */,
+				4239C4D42147D3B500DAA892 /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4239C4DD2147D6E300DAA892 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4239C4F22147D70200DAA892 /* CoinDeskApiProvider.swift in Sources */,
+				4239C4F42147D70200DAA892 /* HistoricalBitcoinResponse.swift in Sources */,
+				4239C4F12147D70200DAA892 /* Encondable+Extension.swift in Sources */,
+				4239C4F52147D70200DAA892 /* RealTimeResponse.swift in Sources */,
+				4239C4F62147D70200DAA892 /* BitcoinPrice.swift in Sources */,
+				4239C4F82147D70200DAA892 /* CurrencyService.swift in Sources */,
+				4239C4EF2147D70200DAA892 /* ListBitcoinPricesViewModel.swift in Sources */,
+				4239C4F72147D70200DAA892 /* BitcoinService.swift in Sources */,
+				4239C4F32147D70200DAA892 /* DatabaseProvider.swift in Sources */,
+				4239C4EE2147D70200DAA892 /* ViewModelType.swift in Sources */,
+				4239C4F02147D70200DAA892 /* Date+Extension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		42442F9B21474354000B604C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42442FB82147455A000B604C /* CurrencyService.swift in Sources */,
-				42442FB621474553000B604C /* Encondable+Extension.swift in Sources */,
-				42442FB72147455A000B604C /* BitcoinService.swift in Sources */,
-				42442FB32147454D000B604C /* CoinDeskApiProvider.swift in Sources */,
-				42442FB021474543000B604C /* BitcoinPrice.swift in Sources */,
-				42442FB121474549000B604C /* HistoricalBitcoinResponse.swift in Sources */,
-				42442FB921474591000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
-				42442FB42147454D000B604C /* DatabaseProvider.swift in Sources */,
-				42442FBA2147463D000B604C /* ViewModelType.swift in Sources */,
-				42442FB521474553000B604C /* Date+Extension.swift in Sources */,
 				42442FA421474355000B604C /* TodayViewController.swift in Sources */,
-				42442FB221474549000B604C /* RealTimeResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -938,21 +1254,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42442F632146AE20000B604C /* HistoricalBitcoinResponse.swift in Sources */,
-				42442F682146AF75000B604C /* CoinDeskApiProvider.swift in Sources */,
 				42442F7B2146C10A000B604C /* BitcoinPriceTableViewCell.swift in Sources */,
-				42442F752146BA76000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
-				EF775A3D21469ACB004A04D3 /* BitcoinService.swift in Sources */,
-				42442F99214739F9000B604C /* CurrencyService.swift in Sources */,
-				42442F6B2146B618000B604C /* Date+Extension.swift in Sources */,
-				42442F8621471BC2000B604C /* DatabaseProvider.swift in Sources */,
 				42442F6E2146B984000B604C /* ListBitcoinPricesViewController.swift in Sources */,
-				42442F8F2147236C000B604C /* RealTimeResponse.swift in Sources */,
-				42442F8B21471F6C000B604C /* Encondable+Extension.swift in Sources */,
-				42442F652146AED6000B604C /* BitcoinPrice.swift in Sources */,
 				EF55C6B021468A8700E44F8F /* AppDelegate.swift in Sources */,
 				42442F9321472AD0000B604C /* RealTimeHeaderView.swift in Sources */,
-				42442F792146BB1B000B604C /* ViewModelType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -973,31 +1278,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		EF55C6DF21468A8C00E44F8F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				42442F8021471413000B604C /* CoinDeskApiProvider.swift in Sources */,
-				42442F9121472374000B604C /* RealTimeResponse.swift in Sources */,
-				EF55C6ED21468A8D00E44F8F /* NotificationController.swift in Sources */,
-				42442F842147148D000B604C /* Date+Extension.swift in Sources */,
-				EF55C6EB21468A8D00E44F8F /* ExtensionDelegate.swift in Sources */,
-				42442F9A21473CB3000B604C /* CurrencyService.swift in Sources */,
-				EF55C70621468B9E00E44F8F /* RowController.swift in Sources */,
-				42442F822147144D000B604C /* BitcoinPrice.swift in Sources */,
-				42442F8121471441000B604C /* ViewModelType.swift in Sources */,
-				42442F832147147E000B604C /* HistoricalBitcoinResponse.swift in Sources */,
-				EF55C6E921468A8D00E44F8F /* InterfaceController.swift in Sources */,
-				42442F8921471E83000B604C /* DatabaseProvider.swift in Sources */,
-				42442F8C21471F76000B604C /* Encondable+Extension.swift in Sources */,
-				42442F7F2147140B000B604C /* BitcoinService.swift in Sources */,
-				42442F7E2147126D000B604C /* ListBitcoinPricesViewModel.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		4219C82A2147C34A000FE60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4219C81E2147C34A000FE60A /* BitcoinEngine */;
+			targetProxy = 4219C8292147C34A000FE60A /* PBXContainerItemProxy */;
+		};
+		4219C82C2147C34A000FE60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF55C6AB21468A8600E44F8F /* BitcoinViewer */;
+			targetProxy = 4219C82B2147C34A000FE60A /* PBXContainerItemProxy */;
+		};
+		4219C8332147C34A000FE60A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4219C81E2147C34A000FE60A /* BitcoinEngine */;
+			targetProxy = 4219C8322147C34A000FE60A /* PBXContainerItemProxy */;
+		};
+		4239C4BC2147D32600DAA892 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4239C4B82147D32600DAA892 /* BitcoinViewer Watch Extension */;
+			targetProxy = 4239C4BB2147D32600DAA892 /* PBXContainerItemProxy */;
+		};
+		4239C4C92147D32600DAA892 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4239C4AC2147D32400DAA892 /* BitcoinViewer Watch */;
+			targetProxy = 4239C4C82147D32600DAA892 /* PBXContainerItemProxy */;
+		};
+		4239C4E82147D6E400DAA892 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4239C4E12147D6E300DAA892 /* BitcoinEngineWatch */;
+			targetProxy = 4239C4E72147D6E400DAA892 /* PBXContainerItemProxy */;
+		};
 		42442FAA21474355000B604C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 42442F9E21474354000B604C /* Bitcoin Widget */;
@@ -1012,16 +1325,6 @@
 			isa = PBXTargetDependency;
 			target = EF55C6AB21468A8600E44F8F /* BitcoinViewer */;
 			targetProxy = EF55C6CC21468A8B00E44F8F /* PBXContainerItemProxy */;
-		};
-		EF55C6D721468A8B00E44F8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF55C6D321468A8B00E44F8F /* BitcoinViewer WatchKit App */;
-			targetProxy = EF55C6D621468A8B00E44F8F /* PBXContainerItemProxy */;
-		};
-		EF55C6E621468A8C00E44F8F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = EF55C6E221468A8C00E44F8F /* BitcoinViewer WatchKit Extension */;
-			targetProxy = EF55C6E521468A8C00E44F8F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1061,9 +1364,249 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4219C8372147C34A000FE60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 316F850D0D0715F6E2ECA420 /* Pods-BitcoinEngine.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitcoinEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4219C8382147C34A000FE60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2F1F67BBA287414146FF5D95 /* Pods-BitcoinEngine.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitcoinEngine/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngine;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4219C83B2147C34A000FE60A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BitcoinEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitcoinViewer.app/BitcoinViewer";
+			};
+			name = Debug;
+		};
+		4219C83C2147C34A000FE60A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BitcoinEngineTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngineTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BitcoinViewer.app/BitcoinViewer";
+			};
+			name = Release;
+		};
+		4239C4CC2147D32600DAA892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D95470D31C0215A9A966291 /* Pods-BitcoinViewer Watch Extension.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BitcoinViewer Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		4239C4CD2147D32600DAA892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9D30F6E1A87AFB9EE2C16E17 /* Pods-BitcoinViewer Watch Extension.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "BitcoinViewer Watch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		4239C4D02147D32600DAA892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2NJ6URQ6C;
+				IBSC_MODULE = BitcoinViewer_Watch_Extension;
+				INFOPLIST_FILE = "BitcoinViewer Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		4239C4D12147D32600DAA892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C2NJ6URQ6C;
+				IBSC_MODULE = BitcoinViewer_Watch_Extension;
+				INFOPLIST_FILE = "BitcoinViewer Watch/Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		4239C4EB2147D6E400DAA892 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A8EBE190369B1EBE00044457 /* Pods-BitcoinEngineWatch.debug.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitcoinEngineWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngineWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		4239C4EC2147D6E400DAA892 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30DF962E55D584C5822561FB /* Pods-BitcoinEngineWatch.release.xcconfig */;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = BitcoinEngineWatch/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = Ivan.BitcoinEngineWatch;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 		42442FAD21474355000B604C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 05420C27A35AC3FA50CBB486 /* Pods-Bitcoin Widget.debug.xcconfig */;
+			baseConfigurationReference = 8FD2A8310A476FF3C01723E2 /* Pods-Bitcoin Widget.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1083,7 +1626,7 @@
 		};
 		42442FAE21474355000B604C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2F84E21D8F71E1E96D70AA6 /* Pods-Bitcoin Widget.release.xcconfig */;
+			baseConfigurationReference = 9D84A7FFD99EDC4BC7C297B6 /* Pods-Bitcoin Widget.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1138,6 +1681,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				"FRAMEWORK_SEARCH_PATHS[arch=*]" = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1158,6 +1703,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				"USER_HEADER_SEARCH_PATHS[arch=*]" = "${SRCROOT}";
 			};
 			name = Debug;
 		};
@@ -1198,6 +1744,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1215,97 +1762,10 @@
 			};
 			name = Release;
 		};
-		EF55C6F521468A8D00E44F8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5907085891B77B99E4A2773D /* Pods-BitcoinViewer WatchKit Extension.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2NJ6URQ6C;
-				INFOPLIST_FILE = "BitcoinViewer WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Debug;
-		};
-		EF55C6F621468A8D00E44F8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E4361B6640D6504B7F5775C1 /* Pods-BitcoinViewer WatchKit Extension.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2NJ6URQ6C;
-				INFOPLIST_FILE = "BitcoinViewer WatchKit Extension/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp.watchkitextension;
-				PRODUCT_NAME = "${TARGET_NAME}";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Release;
-		};
-		EF55C6F921468A8D00E44F8F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB6CA95FC97DD3600B994906 /* Pods-BitcoinViewer WatchKit App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2NJ6URQ6C;
-				IBSC_MODULE = BitcoinViewer_WatchKit_Extension;
-				INFOPLIST_FILE = "BitcoinViewer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Debug;
-		};
-		EF55C6FA21468A8D00E44F8F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC42237F1F591D788A596E71 /* Pods-BitcoinViewer WatchKit App.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = C2NJ6URQ6C;
-				IBSC_MODULE = BitcoinViewer_WatchKit_Extension;
-				INFOPLIST_FILE = "BitcoinViewer WatchKit App/Info.plist";
-				PRODUCT_BUNDLE_IDENTIFIER = Test.BitcoinViewer.watchkitapp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 4.3;
-			};
-			name = Release;
-		};
 		EF55C6FD21468A8D00E44F8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 73D30B87374DDBC0905A4D1D /* Pods-BitcoinViewer.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1325,7 +1785,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 08304BAC24612EB1311B6336 /* Pods-BitcoinViewer.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1345,7 +1804,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17B834CDF4250EE2C2AED4B3 /* Pods-BitcoinViewerTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1367,7 +1825,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9EEA6C28FCC5EC85397A5DE9 /* Pods-BitcoinViewerTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = C2NJ6URQ6C;
@@ -1430,6 +1887,51 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4219C8362147C34A000FE60A /* Build configuration list for PBXNativeTarget "BitcoinEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4219C8372147C34A000FE60A /* Debug */,
+				4219C8382147C34A000FE60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4219C83A2147C34A000FE60A /* Build configuration list for PBXNativeTarget "BitcoinEngineTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4219C83B2147C34A000FE60A /* Debug */,
+				4219C83C2147C34A000FE60A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4239C4CB2147D32600DAA892 /* Build configuration list for PBXNativeTarget "BitcoinViewer Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4239C4CC2147D32600DAA892 /* Debug */,
+				4239C4CD2147D32600DAA892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4239C4CF2147D32600DAA892 /* Build configuration list for PBXNativeTarget "BitcoinViewer Watch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4239C4D02147D32600DAA892 /* Debug */,
+				4239C4D12147D32600DAA892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4239C4ED2147D6E400DAA892 /* Build configuration list for PBXNativeTarget "BitcoinEngineWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4239C4EB2147D6E400DAA892 /* Debug */,
+				4239C4EC2147D6E400DAA892 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		42442FAC21474355000B604C /* Build configuration list for PBXNativeTarget "Bitcoin Widget" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1444,24 +1946,6 @@
 			buildConfigurations = (
 				EF55C6F221468A8D00E44F8F /* Debug */,
 				EF55C6F321468A8D00E44F8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF55C6F421468A8D00E44F8F /* Build configuration list for PBXNativeTarget "BitcoinViewer WatchKit Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF55C6F521468A8D00E44F8F /* Debug */,
-				EF55C6F621468A8D00E44F8F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		EF55C6F821468A8D00E44F8F /* Build configuration list for PBXNativeTarget "BitcoinViewer WatchKit App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				EF55C6F921468A8D00E44F8F /* Debug */,
-				EF55C6FA21468A8D00E44F8F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

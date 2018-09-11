@@ -1,6 +1,0 @@
-framework module Pods_BitcoinViewer_WatchKit_App {
-  umbrella header "Pods-BitcoinViewer WatchKit App-umbrella.h"
-
-  export *
-  module * { export * }
-}

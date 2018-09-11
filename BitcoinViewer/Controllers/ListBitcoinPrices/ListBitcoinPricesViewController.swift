@@ -9,6 +9,7 @@
 import UIKit
 import NSObject_Rx
 import RxViewController
+import BitcoinEngine
 
 final class ListBitcoinPricesViewController: UIViewController {
     
@@ -31,6 +32,7 @@ final class ListBitcoinPricesViewController: UIViewController {
         let input = ListBitcoinPricesViewModel.Input(viewWillAppear: viewWillAppear)
         let output = viewModel.transform(input: input)
         output.state.subscribe(onNext: { [weak self] state in
+            guard let strongSelf = self else { return }
             switch state {
             case .loading:
                 self?.activityIndicatorView.startAnimating()
@@ -38,9 +40,12 @@ final class ListBitcoinPricesViewController: UIViewController {
                 self?.activityIndicatorView.stopAnimating()
                 self?.bitcoinPrices = bitcoinPrices
                 self?.variations = variations
-                if let realTime = bitcoinRealTime {
-                    self?.realTimeHeaderView?.setup(bitcoinPrice: realTime)
-                }
+                bitcoinRealTime.subscribe(onNext: { bitcoinRealTime in
+                    if let realTime = bitcoinRealTime {
+                        self?.realTimeHeaderView?.setup(bitcoinPrice: realTime)
+                    }
+                }).disposed(by: strongSelf.rx.disposeBag)
+
             }
         }).disposed(by: rx.disposeBag)
     }

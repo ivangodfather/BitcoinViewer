@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitcoinEngine
 
 final class RealTimeHeaderView: UITableViewHeaderFooterView {
     
@@ -15,7 +16,7 @@ final class RealTimeHeaderView: UITableViewHeaderFooterView {
     
     func setup(bitcoinPrice: BitcoinPrice) {
         priceLabel.text = "🤑 " + bitcoinPrice.price.description
-        dateLabel.text = "🕑 " + bitcoinPrice.date
+        dateLabel.text = "🕑 " + bitcoinPrice.date + " (Now)"
     }
     
 }

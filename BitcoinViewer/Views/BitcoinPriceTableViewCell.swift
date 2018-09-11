@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import BitcoinEngine
 
 final class BitcoinPriceTableViewCell: UITableViewCell {
     

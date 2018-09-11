@@ -1,5 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
+source 'https://github.com/CocoaPods/Specs.git'
+platform :ios, '11.0'
 
 target 'BitcoinViewer' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
@@ -26,24 +28,15 @@ target 'BitcoinViewer' do
 
 end
 
-target 'BitcoinViewer WatchKit App' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+target 'BitcoinViewer Watch Extension' do
+    platform :watchos, '3.0'
 
-  # Pods for BitcoinViewer WatchKit App
-
-end
-
-target 'BitcoinViewer WatchKit Extension' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
   
 
   # Pods for BitcoinViewer WatchKit Extension
   pod 'RxSwift'
-  pod 'NSObject+Rx'
-  pod 'RxCocoa'
-  pod 'Moya/RxSwift'
 
 end
 
@@ -52,11 +45,37 @@ target 'Bitcoin Widget' do
     use_frameworks!
     
     
+    # Pods for Bitcoin Widget
+        pod 'RxSwift'
+        pod 'RxViewController'
+        pod 'NSObject+Rx'
+
+    
+end
+
+target 'BitcoinEngine' do
+    platform :ios, '11.0'
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    
     # Pods for BitcoinViewer WatchKit Extension
     pod 'RxSwift'
-    pod 'NSObject+Rx'
-    pod 'RxCocoa'
     pod 'Moya/RxSwift'
     pod 'RxViewController'
+    pod 'NSObject+Rx'
+    
+end
+
+target 'BitcoinEngineWatch' do
+    platform :watchos, '3.0'
+
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    
+    # Pods for BitcoinViewer WatchKit Extension
+    pod 'RxSwift'
+    pod 'Moya/RxSwift'
     
 end

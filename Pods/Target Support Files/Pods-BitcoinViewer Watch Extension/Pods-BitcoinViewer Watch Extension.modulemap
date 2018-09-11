@@ -1,0 +1,6 @@
+framework module Pods_BitcoinViewer_Watch_Extension {
+  umbrella header "Pods-BitcoinViewer Watch Extension-umbrella.h"
+
+  export *
+  module * { export * }
+}

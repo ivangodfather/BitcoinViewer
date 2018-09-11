@@ -43,14 +43,29 @@ final class ListBitcoinPricesViewModelTests: XCTestCase {
     
     func testExpectVariationList() {
         let input = ListBitcoinPricesViewModel.Input(viewWillAppear: .just(()))
-        let valuesToReturn = [BitcoinPrice(date: "1", price: 100),
-                              BitcoinPrice(date: "2", price: 200),
-                              BitcoinPrice(date: "3", price: 300)]
-        mockBitcoinService.valuesToReturn = valuesToReturn
+        mockBitcoinService.valuesToReturn = valuesToReturn()
         
         _ = try? sut.transform(input: input).state.toBlocking().first()
         
         expect(self.mockCurrencyService.receivedList).to(equal([100, 200, 300]))
+    }
+    
+    func testsOutputCorrectFinishStateValues() {
+        let input = ListBitcoinPricesViewModel.Input(viewWillAppear: .just(()))
+        mockBitcoinService.valuesToReturn = valuesToReturn()
+        
+        let state = try! sut.transform(input: input).state.toBlocking().last()!
+
+        expect(state).toNot(equal(ListBitcoinPricesViewModel.State.loading))
+        if case let ListBitcoinPricesViewModel.State.loaded(bitcoinPrices, _, _) = state {
+            expect(bitcoinPrices).to(equal(valuesToReturn()))
+        }
+    }
+    
+    private func valuesToReturn() -> [BitcoinPrice] {
+        return [BitcoinPrice(date: "1", price: 100),
+                BitcoinPrice(date: "2", price: 200),
+                BitcoinPrice(date: "3", price: 300)]
     }
 
     

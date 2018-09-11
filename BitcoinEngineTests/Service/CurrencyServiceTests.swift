@@ -3,7 +3,7 @@
 //  BitcoinViewerTests
 //
 //  Created by Iván Ruiz on 10/09/2018.
-//  Copyright © 2018 Netquest. All rights reserved.
+
 //
 
 import XCTest

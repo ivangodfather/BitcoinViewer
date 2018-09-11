@@ -10,6 +10,7 @@
 		18C65179E666CA0344B6A837 /* Pods_BitcoinViewerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 149BD4008A6779D67C69F473 /* Pods_BitcoinViewerUITests.framework */; };
 		2450716D1E27F3235CE7E65F /* Pods_BitcoinViewer_WatchKit_Extension.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7CE222600B4FD730E6B7BF94 /* Pods_BitcoinViewer_WatchKit_Extension.framework */; };
 		371341AA4BF4DDC475E60428 /* Pods_BitcoinViewer_WatchKit_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B022DE4124AB03BB1636C4EB /* Pods_BitcoinViewer_WatchKit_App.framework */; };
+		4219C8192147BD30000FE60A /* BitcoinPriceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */; };
 		42442F632146AE20000B604C /* HistoricalBitcoinResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */; };
 		42442F652146AED6000B604C /* BitcoinPrice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F642146AED6000B604C /* BitcoinPrice.swift */; };
 		42442F682146AF75000B604C /* CoinDeskApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42442F672146AF75000B604C /* CoinDeskApiProvider.swift */; };
@@ -58,7 +59,7 @@
 		EF55C6B521468A8700E44F8F /* ListBitcoin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B321468A8700E44F8F /* ListBitcoin.storyboard */; };
 		EF55C6B721468A8B00E44F8F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B621468A8B00E44F8F /* Assets.xcassets */; };
 		EF55C6BA21468A8B00E44F8F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6B821468A8B00E44F8F /* LaunchScreen.storyboard */; };
-		EF55C6C521468A8B00E44F8F /* BitcoinViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6C421468A8B00E44F8F /* BitcoinViewerTests.swift */; };
+		EF55C6C521468A8B00E44F8F /* CurrencyServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6C421468A8B00E44F8F /* CurrencyServiceTests.swift */; };
 		EF55C6D021468A8B00E44F8F /* BitcoinViewerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF55C6CF21468A8B00E44F8F /* BitcoinViewerUITests.swift */; };
 		EF55C6D521468A8B00E44F8F /* BitcoinViewer WatchKit App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = EF55C6D421468A8B00E44F8F /* BitcoinViewer WatchKit App.app */; };
 		EF55C6DB21468A8B00E44F8F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF55C6D921468A8B00E44F8F /* Interface.storyboard */; };
@@ -154,6 +155,7 @@
 		1BFE5ACBE877CA727274C0B8 /* Pods_BitcoinViewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1EF6E1B9AB5370740B8CCCDD /* Pods_BitcoinViewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BitcoinViewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2421F265953B4FFD47E8395B /* Pods-BitcoinViewerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BitcoinViewerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BitcoinViewerUITests/Pods-BitcoinViewerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPriceTests.swift; sourceTree = "<group>"; };
 		42442F622146AE20000B604C /* HistoricalBitcoinResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoricalBitcoinResponse.swift; sourceTree = "<group>"; };
 		42442F642146AED6000B604C /* BitcoinPrice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinPrice.swift; sourceTree = "<group>"; };
 		42442F672146AF75000B604C /* CoinDeskApiProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinDeskApiProvider.swift; sourceTree = "<group>"; };
@@ -191,7 +193,7 @@
 		EF55C6B921468A8B00E44F8F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EF55C6BB21468A8B00E44F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF55C6C021468A8B00E44F8F /* BitcoinViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF55C6C421468A8B00E44F8F /* BitcoinViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinViewerTests.swift; sourceTree = "<group>"; };
+		EF55C6C421468A8B00E44F8F /* CurrencyServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyServiceTests.swift; sourceTree = "<group>"; };
 		EF55C6C621468A8B00E44F8F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EF55C6CB21468A8B00E44F8F /* BitcoinViewerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BitcoinViewerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF55C6CF21468A8B00E44F8F /* BitcoinViewerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitcoinViewerUITests.swift; sourceTree = "<group>"; };
@@ -296,6 +298,22 @@
 				B2F84E21D8F71E1E96D70AA6 /* Pods-Bitcoin Widget.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4219C8162147BAE9000FE60A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				EF55C6C421468A8B00E44F8F /* CurrencyServiceTests.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		4219C8172147BD1B000FE60A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4219C8182147BD30000FE60A /* BitcoinPriceTests.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		42442F612146AE11000B604C /* Model */ = {
@@ -430,7 +448,8 @@
 		EF55C6C321468A8B00E44F8F /* BitcoinViewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				EF55C6C421468A8B00E44F8F /* BitcoinViewerTests.swift */,
+				4219C8172147BD1B000FE60A /* Model */,
+				4219C8162147BAE9000FE60A /* Service */,
 				EF55C6C621468A8B00E44F8F /* Info.plist */,
 			);
 			path = BitcoinViewerTests;
@@ -530,6 +549,7 @@
 				EF55C6BC21468A8B00E44F8F /* Sources */,
 				EF55C6BD21468A8B00E44F8F /* Frameworks */,
 				EF55C6BE21468A8B00E44F8F /* Resources */,
+				325E95D91D032AD829E7305B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -744,6 +764,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		325E95D91D032AD829E7305B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewerTests/Pods-BitcoinViewerTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-BitcoinViewerTests/Pods-BitcoinViewerTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		42F180F651028F6D74A741CB /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -922,7 +960,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF55C6C521468A8B00E44F8F /* BitcoinViewerTests.swift in Sources */,
+				4219C8192147BD30000FE60A /* BitcoinPriceTests.swift in Sources */,
+				EF55C6C521468A8B00E44F8F /* CurrencyServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -16,6 +16,7 @@ target 'BitcoinViewer' do
   target 'BitcoinViewerTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'Nimble'
   end
 
   target 'BitcoinViewerUITests' do
